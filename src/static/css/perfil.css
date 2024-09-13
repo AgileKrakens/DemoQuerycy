@@ -34,12 +34,16 @@
     
 .header .sobre {
     font-size: 18px; 
-}
-    
+}  
+ 
 section {
     grid-row: 2/-2;
 }
-
+/* linha divisória entre os painéis */
+.left-panel {
+    padding-right: 20px; 
+    border-right: 1px solid #ccc; 
+}
 .info {
     display: grid;
     grid-template-columns: 1fr;
@@ -47,7 +51,6 @@ section {
     width: 350px;
     grid-column: 1;
     grid-row: 3/4;
-    background-color: gray;
 }
 
 .nome {
@@ -58,35 +61,66 @@ section {
     display: grid;
     grid-auto-rows: 1fr 2fr 2fr 2fr;
     grid-template-columns: 1fr;
-    gap: 1rem;
+
 }
 
-.presença {
-    display: flex;
-    justify-content: space-evenly;
+/* container para as seções de presença e comparação lado a lado */
+.presenca-comparacao {
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 40px; 
 }
 
+/* ajusta o tamanho das seções internas */
+.presenca, .comparacao {
+    width: 48%; 
+}
+
+/* estilo dos títulos de cada seção */
+.presenca h3, .comparacao h3, .leis h3, .comissoes h3, .comparacao-geral h3 {
+    font-size: 16px; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+/* estilos para o texto que indica presença */
+.presente {
+    color: green; 
+    font-weight: bold; 
+}
+
+/* estilos para o texto que indica ausência */
+.ausente {
+    color: red; 
+    font-weight: bold; 
+}
 article {
-    grid-column: 2/-1;
-    justify-content: center;
+    grid-column: 2/-2;
+    
 }
-
-.leis {
-    margin-left: 50%;
-    font-style: bold;
-}
-
+/* estilos da tabela que contém as leis aprovadas */
 table {
-    border-collapse: collapse;
+    width: 100%; 
+    border-collapse: collapse; 
 }
 
-td,
-th {
-    border: 1px solid black;
-    text-align: left;
-    padding: 8px;
+/* estilos para as células da tabela (cabeçalhos e dados) */
+table th, table td {
+    border: 1px solid #acacac; 
+    padding: 10px; 
+    text-align: center; 
 }
 
+/* estilo para o cabeçalho da tabela */
+table th {
+    background-color: #f2f2f2; 
+}
+
+/* estilo para os links dentro das células da tabela */
+table td a {
+    color: blue; 
+    text-decoration: underline; 
+}
 .tabelas {
     display: flex;
     justify-content: space-evenly;
@@ -101,17 +135,17 @@ th {
     flex-direction: column;
     height: auto;
     width: 200px;
-    background-color: gray;
+    background-color: #f2f2f2;
     align-items: center;
 }
 
 .comparaçao {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     height: auto;
     width: 200px;
-    background-color: gray;
+    background-color: #f2f2f2;
 
 }
 
