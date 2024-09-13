@@ -5,28 +5,42 @@
     align-items: center;
     justify-content: center;
 } */
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.grid-wrapper{
+
+.grid-wrapper {
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: 350px 1fr;
     gap: 1rem;
 }
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: mediumslateblue;
+
+.header {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 10px 20px; 
+    background: linear-gradient(to right, #3399ff, #66ccff); 
+    color: white; 
     grid-column: 1/-1;
     grid-row: 1;
 }
-section{
+    
+.header .logo {
+    font-size: 24px; 
+    font-weight: bold; 
+}
+    
+.header .sobre {
+    font-size: 18px; 
+}
+    
+section {
     grid-row: 2/-2;
 }
-.info{
+
+.info {
     display: grid;
     grid-template-columns: 1fr;
     height: 350px;
@@ -35,43 +49,54 @@ section{
     grid-row: 3/4;
     background-color: gray;
 }
-.nome{
-    margin: 0px 150px;
+
+.nome {
+    margin-left: 25%;
 }
-.grid-wrapper>main{
+
+.grid-wrapper>main {
     display: grid;
     grid-auto-rows: 1fr 2fr 2fr 2fr;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
-.presença{
+
+.presença {
     display: flex;
     justify-content: space-evenly;
 }
-article{
+
+article {
     grid-column: 2/-1;
     justify-content: center;
 }
-.leis{
+
+.leis {
     margin-left: 50%;
     font-style: bold;
 }
-table{
+
+table {
     border-collapse: collapse;
 }
-td,th{
+
+td,
+th {
     border: 1px solid black;
     text-align: left;
     padding: 8px;
 }
-.tabelas{
+
+.tabelas {
     display: flex;
     justify-content: space-evenly;
 }
-.texto{
+
+.texto {
     margin: 0 28%;
 }
-.comissoes{
+
+.comissoes {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -79,20 +104,27 @@ td,th{
     background-color: gray;
     align-items: center;
 }
-.comparaçao{
+
+.comparaçao {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     height: auto;
     width: 200px;
     background-color: gray;
-    
+
 }
-footer{
+
+footer {
     background-color: rgba(116, 114, 114, 0.318);
     display: flex;
     align-items: center;
     justify-content: center;
     grid-column: 1/-1;
     grid-row: -2/-1;
+}
+
+.negrito {
+    font-weight: bold; 
+
 }
