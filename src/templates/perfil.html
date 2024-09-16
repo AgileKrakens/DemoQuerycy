@@ -1,104 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil - Nome do vereador</title>
     <link rel="stylesheet" href="../static/css/perfil.css">
+    <link rel="stylesheet" href="../static/css/reset-perfil.css">
 </head>
-<body class="grid-wrapper">
-    <header class="header">
+
+<body>
+    <header>
+        <!-- <img src="./" alt="Logo" class="logo"> -->
         <div class="logo">LOGO</div>
-        <div class="sobre">SOBRE</div>
+        <div class="sobre">Sobre</div>
     </header>
-    <section>
-        <div class="left-panel">
-            <img src="../static/images/milton.jpg" alt="" class="foto">
-            <div class="info">
-                <span class="nome negrito">Ver. Milton Vieira Filho</span>
-                <div><span class="negrito"><br>Partido:</span>Republicanos</div>
-                <div><span class="negrito"><br>Nome Civil:</span>Ricelli Martins Pinto</div>
-                <div><span class="negrito"><br>Idade:</span>41 anos</div>
-                <div><span class="negrito"><br>Formação:</span>Ensino Superior Incompleto</div>
-                <div><span class="negrito"><br>Telefone:</span>(12) 3925-6529</div>
-                <div><span class="negrito"><br>Profissão:</span>Vereador</div>
-                <div><span class="negrito"><br><br>Mandato:</span>2021-2024</div>
-            </div>
-        </div>
-    </section>
-    <main>
-        <article>
-            <div class="right-panel">
-                <div class="presenca-comparacao">
-                    <div class="presenca">
-                        <h3>Presença nas sessões:</h3>
-                        <p><span class="presente">Presente</span> em X% das sessões</p>
-                        <p><span class="ausente">Ausente</span> em X% das sessões</p>
-                    </div>
-    
-                    <div class="comparacao">
-                        <h3>Comparação:</h3>
-                        <p>Média de <span class="presente">Presença</span> dos Vereadores: X%</p>
-                        <p>Média de <span class="ausente">Ausência</span> dos Vereadores: X%</p>
-                    </div>
+
+    <main class="wrapper">
+        <section class="perfil">
+            <img src="../static/images/milton.jpg" alt="" class="image">
+            <div class="card-infos">
+                <div class="infos">
+                    <span id="nome">Ver. Milton Vieira Filho</span>
                 </div>
-        </article>
-        <article>
-            <div class="leis">
-                <h3>Leis aprovadas neste mandato</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Descrição</th>
-                            <th>LINK</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>539898</td>
-                            <td>Autoriza o poder executivo a substituição dos sinais sonoros nos estabelecimentos de ensino
-                                público, a fim de não gerar incomodos sensoriais aos alunos com Transtorno do Espectro Autista
-                                (TEA)</td>
-                            <td><a href="#">link do mandato</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="infos">
+                    Partido: <span id="partido">Republicanos</span>
+                </div>
+                <div class="infos">
+                    Nome Civil: <span id="nome-civil">Ricelli Martins Pinto</span>
+                </div>
+                <div class="infos">
+                    Idade: <span id="idade">41 anos</span>
+                </div>
+                <div class="infos">
+                    Formação: <span id="formacao">Ensino Superior Incompleto</span>
+                </div>
+                <div class="infos">
+                    Telefone: <span id="telefone">(12) 3925-6529</span>
+                </div>
+                <div class="infos">
+                    Profissão: <span id="profissao">Vereador</span>
+                </div>
+                <div class="infos">
+                    Mandato: <span id="mandato">2021-2024</span>
+                </div>
+        </section>
+
+        <section class="sessoes">
+            <div class="registro">
+                <h3>Presença nas Sessões</h3>
+                <p><span class="presente">Presente</span> em <span id="presenca">X</span>% das sessões</p>
+                <p><span class="ausente">Ausente</span> em <span id="ausencia">X</span>% das sessões</p>
             </div>
-        </article>
-        <article class="tabelas">
-            <div class="comissoes">
-                <span class="texto negrito">Comissões</span>
-                <span><br>Comissão:</span>
-                <span><br>Cargo ----- Data</span>
-                <span><br>Comissão:</span>
-                <span><br>Cargo ----- Data</span>
-                <span><br>Comissão:</span>
-                <span><br>Cargo ----- Data</span>
+            <div class="comparacao">
+                <h3>Comparação:</h3>
+                <p>Média de <span class="presente">presença</span> dos vereadores <span
+                        id="presencaVereadores">X</span>%</p>
+                <p>Média de <span class="ausente">ausência</span> dos vereadores <span id="ausenciaVereadores">X</span>%
+                </p>
             </div>
-            <div class="comparaçao">
-                <span class="negrito texto">Comparação</span>
-                <table>
+        </section>
+
+
+        <section class="leis">
+            <h3>Leis aprovadas neste mandato</h3>
+            <table class="tabela-leis">
+                <thead>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <th>Código</th>
+                        <th>Descrição</th>
+                        <th>LINK</th>
                     </tr>
+                </thead>
+                <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>353/98</td>
+                        <td>Autoriza o Poder Executivo a substituição dos sinais sonoros...</td>
+                        <td><a href="#">HYPERLINK</a></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
+                    <tr></tr>
+                    <td>XXX/XX</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente asperiores iste,
+                        quidem inventore magnam necessitatibus! Non odio aliquam molestias. Id nisi quia quasi dicta
+                        incidunt tempore facilis enim a.</td>
+                    <td><a href="#">HYPERLINK</a></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
+                    <tr></tr>
+                    <td>XXX/XX</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quidem animi corrupti numquam!
+                        Dignissimos facere qui quas cumque. Blanditiis, reprehenderit recusandae aliquid quae et laborum
+                        molestiae magni laudantium similique nobis!</td>
+                    <td><a href="#">HYPERLINK</a></td>
                     </tr>
-                </table>
-            </div>
-        </article>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="comissoes">
+            <h3>Comissões</h3>
+            <p>Comissão: Cargo ----- Data</p>
+            <p>Comissão: Cargo ----- Data</p>
+            <p>Comissão: Cargo ----- Data</p>
+        </section>
+
+        <section class="comparacao-geral">
+            <h3>Comparação Geral</h3>
+            <div class="tabela-comparacao"></div>
+        </section>
     </main>
-    <footer><p>© Todos os direitos Reservados</p></footer>
 </body>
+
 </html>
