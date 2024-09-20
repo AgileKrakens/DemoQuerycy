@@ -1,161 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 10%;
-    background-color: mediumslateblue;
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    min-height: 100vh;
+    background-color: #d4d4d4;
 }
 main{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 70px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    overflow: hidden;
+}
+h1{
+    padding-top: 70px;
+}
+.titulo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.titulo p{
+    padding: 0;
+    padding-left: 10px;
+}
+/* ------------------CARD-------------------- */
+.card{
+    background-color: #FFF ;
+    border-radius: 25px;
+    width: fit-content;
+}
+.overlay{
+    position: absolute;
     height: 100%;
     width: 100%;
+    background-color: #000;
+    border-radius: 23px 23px 0px 25px;
+    left: 0;
+    top: 0;
 }
-
-.logo, .sobre{
-    margin: 15px;
-}
-
-/* -------------------------Barra de pesquisa----------------------------- */
-.barraDePesquisa{
-    width: 100vw;
-    background-color: rgba(120, 120, 120, 40%);
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    padding: 10px 20px;
+.overlay::before, .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
     
 }
-
-.barraDePesquisa input {
-    background: transparent;
-    flex: 1;
-    border: 0;
-    outline: none;
-    padding: 24px, 20px;
-    font-size: 20px;
-    text-align: center;
-    color: rgb(62, 61, 61);
-
+.overlay::before{
+    width: 39px;
+    height: 41px;
+    background-color: #000;
 }
-::placeholder{
-    color: rgb(102, 102, 102);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-style: italic;
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
 }
-.Search-icon{
-    height: 16px;
-    width: 17px;
-    
-}
-.pesquisar {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    height: 25px;
-    margin-top: 15px;
+.card-image{
+    background-color: #FFF;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    padding: 3px;
+    border-radius: 50%;
 }
 
-
-/* -------------------------//----------------------------- */
-
-/* --------------------------BotãoDeFiltros--------------------------- */
-
-.filter-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding-left: 65px;
-}
-
-.filtros-label{
+.card-image .card-img{
+    height: 100%;
     width: 100%;
-    margin-top: 20px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4067; /* outra cor: #000*/
 }
 
-.filter-section{
-    width: 100%;
-    margin-top: 10px;
-}
-
-.container-filtros{
-    display: flex ;
-    gap: 10px;
-    padding-bottom: 50px;
-}
-/* ------------------------------------------------------ */
-
-.cards-section{
+.image-content, .card-content{
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    width: 100%;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
-    width: 100%;
+    padding: 12px 15px;
 }
-
-.cards{
-    
-    height: 300px;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 20%);
-    border: 1px, solid, #222;
-    border-radius: 20px;
-}
-
-
-footer{
-    width: 100%;
-    height: 100px;
-    background-color: rgba(116, 114, 114, 0.318);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-
-.btn {
-    background-color: #222;
-    border-radius: 4px;
-    border-style: none;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin: 0;
-    max-width: none;
-    min-height: 30px;
-    min-width: 10px;
-    outline: none;
-    overflow: hidden;
-    padding: 9px 20px 8px;
+.image-content{
+    padding: 25px 0;
+    row-gap: 5px;
     position: relative;
+    
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #323334;
+    padding: 6px;
+}
+
+.descricao{
+    font-size: 14px;
+    color: #707070;
     text-align: center;
-    text-transform: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    padding-top: 10px;
+}
+
+.button{
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 8px 16px;
+    background-color: #000;
+    margin: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.button:hover{
+    background: #575757;
+}
+
+/* ------------------CARD-------------------- */
+/* ----------------CARROSSEL----------------- */
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px;
+}
+.slide-container{
+    max-width: 1440px;
     width: 100%;
+    padding: 40px 0;
+    
 }
-.btn:hover{
-    opacity: .75;
+
+
+.swiper-navBtn{
+    color: black;
+    transition: color 0.3s ease;
 }
+.swiper-navBtn:hover{
+    color: rgb(49, 49, 49);
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 40px;
+} 
+
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev{
+    left: 0;
+}
+.swipper-pagination-bullet{
+    background-color: black;
+}
+.swipper-pagination-bullet-active{
+    background-color: rgb(49, 49, 49);
+}
+/* ----------------CARROSSEL----------------- */
+
+
+/* ---------------RESPONSIVO----------------- */
+@media screen and (max-width: 768px){
+    .swiper-navBtn{
+        display: none;
+    }
+    .slide-content{
+       margin: 0 10px; 
+       padding: 20px 0 25px 0;
+    }
+    .titulo{
+        align-items: flex-start;
+    }
+    
+    h1 {
+        padding: 0;
+        padding-left: 10px;
+        
+    }
+    main{
+        height: 100%;
+    }
+    body{
+        height: 125vh;
+    }
+    .slide-container{
+        padding: 0;
+    }
+    /* .slide-content{
+        height: 500px;
+    } */
+    
+}
+/* ---------------RESPONSIVO----------------- */
+
+/* -------------BARRA-DE-PESQUISA------------- */
+
+
+/* -------------BARRA-DE-PESQUISA------------- */
