@@ -19,8 +19,7 @@ header{
 }
 .nav-bar ul {
     display: flex;
-    gap: 60px;
-    
+    align-items: center;
 }
 .nav-bar ul li a{
     display: block;
@@ -30,6 +29,7 @@ header{
     border-radius: 40px;
     transition: 0.2s;
     margin: 0 5px;
+    letter-spacing: 0.1em;
 }
 
 .nav-bar ul li a:hover{
@@ -45,17 +45,60 @@ header{
     /* padding-left: 20px; */
     color: #fefefe;
     font-size: 28px;
-    
+    letter-spacing: 0.2em;
 }
 
 .hamburguer{
     display: none;
 }
 
+/* -----------BARRA DE PESQUISA------------*/
+.nav-bar ul li div{
+    display: block;
+    padding: 10px 25px;
+    color: #FFFFFF;
+    font-size: 20px;
+    border-radius: 40px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.search-box{
+    border: solid 5px black;
+    display: inline-block;
+    position: relative;
+    border-radius: 50px;
+}
+
+.search-box input[type="text"]{
+    font-size: 20px;
+    font-weight: 600;
+    width: 300px;
+    padding: 5px 40px 5px 10px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 50px;
+    
+}
+/* -----------BARRA DE PESQUISA------------*/
+
+
+
 @media screen and (max-width:1100px){
     header{
         padding: 0 30px;
 
+    }
+    .nav-bar ul li div{
+        margin: 0;
+    }
+    .search-box{
+        margin: 0;
+        border: 0;
+    }
+    .search-box input[type="text"]{
+        width: 250px;
+        font-size: 15px;
     }
 }
 
@@ -84,13 +127,13 @@ header{
         border-bottom-right-radius: 30px;
     }
     .nav-bar.active{
-        height: 250px;
+        height: 230px;
 
     }
     .nav-bar ul {
         display: block;
         width: fit-content;
-        margin: 55px auto 0 auto;
+        margin: 0px auto 0 auto;
         text-align: center;
         transition: 0.5s;
         opacity: 0;
@@ -128,7 +171,7 @@ header{
         border-bottom-right-radius: 30px;
     }
     .nav-bar.active{
-        height: 250px;
+        height: 310px;
 
     }
     .nav-bar ul {
@@ -144,5 +187,11 @@ header{
     }
     .nav-bar ul li a{
         margin-bottom: 15px;
+    }
+
+    .search-box input[type="text"]{
+        width: 85vw;
+        font-size: 18px;
+        text-align: center;
     }
 }
