@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - DemoQuerycy</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header-style.css') }}">
+
+    <!-- Para referenciar arquivos estáticos (como arquivos CSS), a maneira correta no Flask é usar {{ url_for('static', filename='path/to/file') }} -->
+    {% block additional_styles %}
+    {% endblock %}
+
+
+    
+</head>
+
+<body>
+    <header>
+        <span class="logo">Demoquerycy</span>
+        <div class="hamburguer">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <div class="search-box">
+                        <input type="text" placeholder="O que deseja procurar?"></input>
+                        <span></span>
+                    </div>
+                </li>
+                <li>
+                    <a href="/">Políticos</a>
+                </li>
+                <li>
+                    <a href="/">Partidos</a>
+                </li>
+                <li>
+                    <a href="/">Sobre</a>
+                </li>
+            </ul>  
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>

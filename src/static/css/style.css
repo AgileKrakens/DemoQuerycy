@@ -104,24 +104,8 @@ h1{
     text-align: center;
     padding-top: 10px;
 }
-
-.button{
-    border: none;
-    font-size: 16px;
-    color: white;
-    padding: 8px 16px;
-    background-color: #000;
-    margin: 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3 ease;
-}
-
-.button:hover{
-    background: #575757;
-}
-
 /* ------------------CARD-------------------- */
+
 /* ----------------CARROSSEL----------------- */
 .slide-content{
     margin: 0 40px;
@@ -160,6 +144,22 @@ h1{
 }
 .swipper-pagination-bullet-active{
     background-color: rgb(49, 49, 49);
+}
+
+.button{
+    border: none;
+    font-size: 16px;
+    color: white;
+    padding: 8px 16px;
+    background-color: #000;
+    margin: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+.button:hover{
+    background: #575757;
 }
 /* ----------------CARROSSEL----------------- */
 
@@ -205,8 +205,3 @@ h1{
     
 }
 /* ---------------RESPONSIVO----------------- */
-
-/* -------------BARRA-DE-PESQUISA------------- */
-
-
-/* -------------BARRA-DE-PESQUISA------------- */
