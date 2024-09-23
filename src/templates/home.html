@@ -22,10 +22,15 @@
         <nav class="nav-bar">
             <ul>
                 <li>
-                    <div class="search-box">
-                        <input type="text" placeholder="O que deseja procurar?"></input>
-                        <span></span>
-                    </div>
+                    <section class="search-box">
+                        <input type="text" placeholder="O que deseja procurar?" autocomplete="off" id="input-box"></input>
+                        <section class="result-box">
+                            <!-- <ul>
+                                <li>javascript</li> 
+                                <li>web development</li>
+                            </ul> -->
+                        </section>
+                    </section>
                 </li>
                 <li>
                     <a href="/">Políticos</a>
@@ -36,7 +41,7 @@
                 <li>
                     <a href="/">Sobre</a>
                 </li>
-            </ul>  
+            </ul>
         </nav>
     </header>
 
@@ -182,5 +187,6 @@
     <script src="../static/javascript/swiper-bundle.min.js"></script>
     <script src="../static/javascript/script.js"></script>
     <script src="../static/javascript/header-script.js"></script>
+    <script src="../static/javascript/autocomplete.js"></script>
 </body>
 </html>
