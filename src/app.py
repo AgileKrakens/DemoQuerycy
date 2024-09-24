@@ -3,9 +3,9 @@ import json
 
 app = Flask(__name__)
 
-@app.route('/perfil/1')
-def perfil_JSON():
-        with open(f'../src/data/json_files/1.json', 'r') as f:
+@app.route(f'/perfil/<int:id_perfil>')
+def perfil_JSON(id_perfil):
+        with open(f'../src/data/json_files/{id_perfil}.json', 'r') as f:
             dados = json.load(f)
         return render_template('perfil.html', perfil=dados)
         
