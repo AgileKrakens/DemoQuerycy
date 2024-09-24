@@ -8,12 +8,13 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header-style.css') }}">
+    
 
     <!-- Para referenciar arquivos estáticos (como arquivos CSS), a maneira correta no Flask é usar {{ url_for('static', filename='path/to/file') }} -->
     {% block additional_styles %}
     {% endblock %}
 
-
+    <script src="{{ url_for('static', filename='javascript/autocomplete.js') }}"></script>
     
 </head>
 

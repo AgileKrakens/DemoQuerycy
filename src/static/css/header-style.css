@@ -55,7 +55,7 @@ header{
 /* -----------BARRA DE PESQUISA------------*/
 .nav-bar ul li div{
     display: block;
-    padding: 10px 25px;
+    padding: 10px 25px; /*possível necessária mudança para 8px 0*/
     color: #FFFFFF;
     font-size: 20px;
     border-radius: 40px;
@@ -80,7 +80,63 @@ header{
     border-radius: 50px;
     
 }
-/* -----------BARRA DE PESQUISA------------*/
+.search-box input[type="text"]::placeholder{
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* -------Result-Box-------- */
+.result-box{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    width: 100%; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    max-height: 300px; 
+    
+    overflow-y: visible; 
+    
+}
+.result-box ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 5px; */
+    gap: 8px;
+    padding: 20px 10px 10px 10px;
+    padding-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #000;
+}
+.result-box ul li{
+    width: 100%;
+}
+.result-box ul li{
+    border-radius: 40px;
+    padding: 10px ;
+    border: 1px solid #999;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    color: #000;
+}
+
+.result-box ul li:hover{
+    transition: ease-in 0.3s;
+    background-color: #000;
+    color: white;
+    
+}
+
+
+/* -------Result-Box(END)-------- */
+
+/* -----------BARRA DE PESQUISA(END)------------*/
 
 
 
