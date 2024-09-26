@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Nome da página{% endblock %}
+{% block title %}{{ perfil.nome }}{% endblock %}
 
 {% block additional_styles %}
 <link rel="stylesheet" href="../static/css/perfil.css">
@@ -8,7 +8,7 @@
 
 {% block content %}
 <section class="perfil">
-    <img src="" alt="" class="image">
+    <img src="{{ perfil.img }}" alt="imagem_politico" class="image">
     <div class="card-infos">
         <div class="infos">
             <span id="nome">{{ perfil.nome }}</span>
@@ -17,22 +17,22 @@
             Partido: <span id="partido">{{ perfil.partido }}</span>
         </div>
         <div class="infos">
-            Nome Civil: <span id="nome-civil"> NOME CIVIL </span>
+            Nome Civil: <span id="nome-civil"></span>
         </div>
         <div class="infos">
-            Idade: <span id="idade"> IDADE </span>
+            Idade: <span id="idade"></span>
         </div>
         <div class="infos">
-            Formação: <span id="formacao"> FORMAÇÃO </span>
+            Formação: <span id="formacao"></span>
         </div>
         <div class="infos">
             Telefone: <span id="telefone">{{ perfil.telefone[1] }}</span>
         </div>
         <div class="infos">
-            Profissão: <span id="profissao"> PROFISSÃO </span>
+            Profissão: <span id="profissao"></span>
         </div>
         <div class="infos">
-            Mandato: <span id="mandato">MANDATOS</span>
+            Mandato: <span id="mandato"></span>
         </div>
 </section>
 
@@ -65,21 +65,17 @@
         <tbody>
             <tr>
                 <td>353/98</td>
-                <td>Autoriza o Poder Executivo a substituição dos sinais sonoros...</td>
+                <td>descrição...</td>
                 <td><a href="#">HYPERLINK</a></td>
             </tr>
             <tr></tr>
-            <td>XXX/XX</td>
-            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente asperiores iste,
-                quidem inventore magnam necessitatibus! Non odio aliquam molestias. Id nisi quia quasi dicta
-                incidunt tempore facilis enim a.</td>
+            <td></td>
+            <td></td>
             <td><a href="#">HYPERLINK</a></td>
             </tr>
             <tr></tr>
-            <td>XXX/XX</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quidem animi corrupti numquam!
-                Dignissimos facere qui quas cumque. Blanditiis, reprehenderit recusandae aliquid quae et laborum
-                molestiae magni laudantium similique nobis!</td>
+            <td></td>
+            <td></td>
             <td><a href="#">HYPERLINK</a></td>
             </tr>
         </tbody>
