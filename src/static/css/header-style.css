@@ -21,7 +21,7 @@ header{
     display: flex;
     align-items: center;
 }
-.nav-bar ul li a{
+.nav-bar ul li a.nav-buttons{
     display: block;
     padding: 10px 25px;
     color: #FFFFFF;
@@ -32,7 +32,7 @@ header{
     letter-spacing: 0.1em;
 }
 
-.nav-bar ul li a:hover{
+.nav-bar ul li a.nav-buttons:hover{
     transition: ease-in 0.3s;
     background-color: white;
     color: #000000;
@@ -53,15 +53,15 @@ header{
 }
 
 /* -----------BARRA DE PESQUISA------------*/
-.nav-bar ul li div{
+/* .nav-bar ul li div{
     display: block;
-    padding: 10px 25px; /*possível necessária mudança para 8px 0*/
+    padding: 10px 25px; possível necessária mudança para 8px 0
     color: #FFFFFF;
     font-size: 20px;
     border-radius: 40px;
     transition: 0.2s;
     margin: 0 5px;
-}
+} */
 
 .search-box{
     border: solid 5px black;
