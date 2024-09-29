@@ -16,7 +16,7 @@ DemoQuerycy se propõe a ser uma alternativa digital para a participação efeti
 ## Aplicação Web
 
 ## crawler_personal_data
-
+https://github.com/user-attachments/assets/09e7e4a4-59d7-4d1d-b844-55f1984ae509
 
 - Raspagem de dados pessoais de cada político
 - Persistência dos dados em arquivos JSON
