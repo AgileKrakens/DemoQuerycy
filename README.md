@@ -38,7 +38,13 @@ https://github.com/user-attachments/assets/09e7e4a4-59d7-4d1d-b844-55f1984ae509
 git clone https://github.com/AgileKrakens/DemoQuerycy.git
 ```
 ```sh
-cd /DemoQuerycy/src
+cd /DemoQuerycy
+```
+```sh
+pip install -r requirements.txt
+```
+```sh
+cd /src
 ```
 ```sh
 python app.py
