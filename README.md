@@ -18,7 +18,14 @@ Dessa forma, considerando a complexidade dos documentos legais e a dificuldade d
 
 # Features - Sprint 1
 ## Aplicação Web
+https://github.com/user-attachments/assets/29591d73-230e-4df1-af40-73fbc30b7fe2
 
+- Página Home:
+  * Barra de pesquisa
+  * Carrosel
+- Escalabilidade da Página Perfil:
+  * Dados biográficos 
+  * Estrutura geral
 ## crawler_personal_data
 https://github.com/user-attachments/assets/09e7e4a4-59d7-4d1d-b844-55f1984ae509
 
