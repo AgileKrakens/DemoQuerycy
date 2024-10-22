@@ -14,7 +14,7 @@
     {% block additional_styles %}
     {% endblock %}
 
-    <script src="{{ url_for('static', filename='javascript/autocomplete.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='javascript/autocomplete.js') }}"></script>
     
 </head>
 
@@ -29,10 +29,12 @@
         <nav class="nav-bar">
             <ul>
                 <li>
-                    <div class="search-box">
-                        <input type="text" placeholder="O que deseja procurar?"></input>
-                        <span></span>
-                    </div>
+                    <section class="search-box">
+                        <input type="text" placeholder="O que deseja procurar?" autocomplete="off" id="input-box"></input>
+                        <section class="result-box">
+                            
+                        </section>
+                    </section>
                 </li>
                 <li>
                     <a class="nav-buttons" href="/">Home</a>
