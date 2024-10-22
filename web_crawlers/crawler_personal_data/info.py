@@ -14,6 +14,13 @@ def partido(url):
     div_partido = http_get(url).find(id='partido')
     return div_partido.text
 
-def mandato(url):
+def comissoes(url):
     div_mandatos = http_get(url).find('div', class_='kt-timeline-v1__item-content')
     return div_mandatos.text
+       
+def presence_stats(url):
+    url = url + '#tab_frequencia_plenario'
+    div_presence = http_get(url).find(id='tab_frequencia_plenario')
+    return div_presence.text.split()
+
+
