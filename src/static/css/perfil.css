@@ -1,125 +1,263 @@
-
-/* --------------------Header--------------------------- */
-
-main{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-        "perfil sessoes sessoes sessoes"
-        "perfil leis leis leis"
-        "perfil comparacao-geral comparacao-geral comissoes";
-    gap: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100vh;
+/* Container principal */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     width: 100%;
 }
 
-.logo, .sobre{
-    margin: 15px;
-}
-
-/* --------------------Header--------------------------- */
-
-section{
-    background-color: lightslategrey;
-}
-
-.perfil{
-    grid-area: perfil;
-    background-color: lightslategrey;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
+.container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    background-color: #f5f5f59d;
+    min-height: 100vh;
 }
 
-/*--------------------IMAGEM------------------------*/
 
-.image{
-    height: 80%;
-    width: 100%;
-    border-radius: 25px;
-    padding-bottom: 10px;
+/*foto e info básica */
+.sidebar {
+    width: 30%;
+    background-color: #000000;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+
 }
-/*--------------------IMAGEM------------------------*/
-.infos{
-    font-weight: 800;
-    padding: 1.5px;
-}
-#partido, #nome-civil, #idade, #formacao, #telefone, #profissao, #mandato{
-    font-weight: 400;
-}
-.card-infos{
-    background-color: white;
-    border-radius: 15px;
-    padding: 15px;
-    
-}
-.card-infos div{
+
+.sidebar .foto {
     width: 80%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+
 }
 
+/* info-pessoal-sidebar */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+}
 
-.sessoes{
-    grid-area: sessoes;
-    background-color: lightslategrey;
-    padding: 20px;
-    border-radius: 10px;
+.card-body {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* avaliação */
+.avaliacao {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: row-reverse;
+    /* Exibe as estrelas da direita para a esquerda */
+    justify-content: center;
 }
 
-.presente{
-    color: rgba(0, 255, 0, 0.611);
+.avaliacao input {
+    display: none;
+    /* Esconde os inputs de rádio */
 }
 
-.ausente{
-    color: rgba(188, 0, 0, 0.978);
+.avaliacao label {
+    font-size: 3rem;
+    /* Tamanho das estrelas */
+    color: #ccc;
+    /* Cor padrão das estrelas */
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
-/* --------------------Leis--------------------------- */
-.leis {
-    grid-area: leis;
-    background-color: lightslategrey;
+/* Efeito ao passar o mouse: destaca as estrelas */
+.avaliacao label:hover,
+.avaliacao label:hover~label {
+    color: gold;
+}
+
+/* Manter a cor das estrelas após seleção */
+.avaliacao input:checked~label {
+    color: gold;
+}
+
+
+
+
+/* Conteúdo principal */
+.content {
+    width: 70%;
     padding: 20px;
-    border-radius: 10px;
+
 }
 
-.leis table {
+/* Centralizando o texto no Histórico de Mandatos */
+.info-pessoal ul {
+    text-align: center;
+    list-style-type: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    /* Remove o espaçamento interno */
+}
+
+.info-pessoal h2 {
+    text-align: center;
+
+}
+
+.info-pessoal li {
+    margin-bottom: 10px;
+    /* Adiciona um espaçamento entre os itens */
+}
+
+
+
+/* Seções dentro do conteúdo */
+.info-pessoal,
+.presenca,
+.leis,
+.comissoes {
+    margin-bottom: 30px;
+}
+
+/* Estilo dos títulos */
+h2 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+}
+
+/* Presenças e Ausências */
+#presença {
+    color: green;
+}
+
+#faltas {
+    color: red;
+}
+
+/* card presença */
+.container-presença {
+    display: flex;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.card-presença {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 8px;
+    background-color: #c2c2c2bd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+
+}
+
+.card-body-presença {
+    padding: 10px;
+}
+
+.card-title-presença {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.value {
+    font-size: 1rem;
+
+}
+
+
+/* Tabela de leis */
+table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+
 }
 
-.leis table th, .leis table td {
-    border: 1px solid #ccc;
+th,
+td {
+    border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
+
 }
 
-.leis table a {
-    color: #4682B4;
+th {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+a {
+    color: #000000;
     text-decoration: none;
 }
 
-/* --------------------Leis--------------------------- */
-
-.comissoes{
-    grid-area: comissoes;
-    background-color: lightslategrey;
-    padding: 20px;
-    border-radius: 10px;
+a:hover {
+    text-decoration: underline;
 }
 
-.comparacao-geral{
-    grid-area: comparacao-geral;
-    background-color: lightslategrey;
-    padding: 20px;
-    border-radius: 10px;
+.table-container {
+    max-height: 300px;
+    /* Define uma altura máxima */
+    overflow-y: auto;
+    /* Rolagem vertical se necessário */
+    overflow-x: auto;
+    /* Rolagem horizontal se necessário */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+}
+
+/* Comissões */
+ul {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+h5 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
 }

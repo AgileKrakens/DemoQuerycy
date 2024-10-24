@@ -7,90 +7,180 @@
 {% endblock %}
 
 {% block content %}
-<section class="perfil">
-    <img src="{{ perfil.img }}" alt="imagem_politico" class="image">
-    <div class="card-infos">
-        <div class="infos">
-            <span id="nome">{{ perfil.nome }}</span>
+<div class="container">
+    <div class="sidebar">
+        <img src="../static/img/amelia_naomi.jpg" alt="Foto do Político" class="foto">
+        <div class="card">
+            <div class="card-head">
+                <h2>Informações pessoais</h2>
+                <div class="card-body">
+                    <p>Nome: {{perfil.nome}}</p>
+                    <p>Nome de vereador: Marcão da academia</p>
+                    <p>Partido: PT</p>
+                    <p>Idade: 45 anos</p>
+                    <p>Telefone: (11) 99999-9999</p>
+                    <p>formação: Advogado</p>
+                    <p>Área profissional: </p>
+                    <p>Mandato: 2021 - 2024</p>
+                </div>
+            </div>
         </div>
-        <div class="infos">
-            Partido: <span id="partido">{{ perfil.partido }}</span>
+        <div class="card">
+            <div class="card-body">
+                <div class="comissoes">
+                    <h2>Comissões</h2>
+                    <ul>
+                        <li>Educação - Membro - 15/02/2023</li>
+                        <li>Saúde - Presidente - 10/03/2023</li>
+                        <li>Transporte - Membro - 01/04/2023</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="infos">
-            Nome Civil: <span id="nome-civil"></span>
-        </div>
-        <div class="infos">
-            Idade: <span id="idade"></span>
-        </div>
-        <div class="infos">
-            Formação: <span id="formacao"></span>
-        </div>
-        <div class="infos">
-            Telefone: <span id="telefone">{{ perfil.telefone[0] }}</span>
-        </div>
-        <div class="infos">
-            Profissão: <span id="profissao"></span>
-        </div>
-        <div class="infos">
-            Mandato: <span id="mandato"></span>
-        </div>
-</section>
-
-<section class="sessoes">
-    <div class="registro">
-        <h3>Presença nas Sessões</h3>
-        <p><span class="presente">Presente</span> em <span id="presenca">X</span>% das sessões</p>
-        <p><span class="ausente">Ausente</span> em <span id="ausencia">X</span>% das sessões</p>
     </div>
-    <div class="comparacao">
-        <h3>Comparação:</h3>
-        <p>Média de <span class="presente">presença</span> dos vereadores <span
-                id="presencaVereadores">X</span>%</p>
-        <p>Média de <span class="ausente">ausência</span> dos vereadores <span id="ausenciaVereadores">X</span>%
-        </p>
+
+    <div class="content">
+        <div class="container-presença">
+            <div class="card-presença">
+                <div class="card-body-presença">
+                    <h5 class="card-title-presença">Falta/Presença nas sessões</h5>
+                    <div class="row">
+                        <div class="label" id="presença">Número de presenças:</div>
+                        <div class="value">▲ da média dos vereadores</div>
+                    </div>
+                    <div class="row">
+                        <div class="label" id="presença">% de presenças:</div>
+                        <div class="value">▲ da média dos vereadores</div>
+                    </div>
+                    <div class="row">
+                        <div class="label" id="faltas">Número de faltas</div>
+                        <div class="value">▲ da média dos vereadores</div>
+                    </div>
+                    <div class="row">
+                        <div class="label" id="faltas">% de faltas:</div>
+                        <div class="value">▲ da média dos vereadores</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="leis">
+            <div class="table-container">
+                <h2>Proposições</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código da proposição</th>
+                            <th>tipos das proposições</th>
+                            <th>data da proposição</th>
+                            <th>status da proposição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>353/98</td>
+                            <td>Lei de Proteção Ambiental</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                        <tr>
+                            <td>102/21</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                        <tr>
+                            <td>353/98</td>
+                            <td>Lei de Proteção Ambiental</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                        <tr>
+                            <td>102/21</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                        <tr>
+                            <td>353/98</td>
+                            <td>Lei de Proteção Ambiental</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                        <tr>
+                            <td>102/21</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                        <tr>
+                            <td>353/98</td>
+                            <td>Lei de Proteção Ambiental</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                        <tr>
+                            <td>102/21</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="leis">
+            <div class="table-container">
+                <h2>Leis Aprovadas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Tema</th>
+                            <th>Descrição</th>
+                            <th>Data</th>
+                            <th>Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>353/98</td>
+                            <td>Lei de Proteção Ambiental</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                        <tr>
+                            <td>102/21</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                            <td>Lei de Incentivo Cultural</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="info-pessoal">
+            <h2 id="">Histórico de mandatos</h2>
+            <ul id="alinhar">
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
+
+            </ul>
+        </div>
     </div>
-</section>
-
-
-<section class="leis">
-    <h3>Leis aprovadas neste mandato</h3>
-    <table class="tabela-leis">
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Descrição</th>
-                <th>LINK</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>353/98</td>
-                <td>descrição...</td>
-                <td><a href="#">HYPERLINK</a></td>
-            </tr>
-            <tr></tr>
-            <td></td>
-            <td></td>
-            <td><a href="#">HYPERLINK</a></td>
-            </tr>
-            <tr></tr>
-            <td></td>
-            <td></td>
-            <td><a href="#">HYPERLINK</a></td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<section class="comissoes">
-    <h3>Comissões</h3>
-    <p>Comissão: Cargo ----- Data</p>
-    <p>Comissão: Cargo ----- Data</p>
-    <p>Comissão: Cargo ----- Data</p>
-</section>
-
-<section class="comparacao-geral">
-    <h3>Comparação Geral</h3>
-    <div class="tabela-comparacao"></div>
-</section>
+</div>
 {% endblock %}
