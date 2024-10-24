@@ -3,7 +3,7 @@
 
 {% block additional_styles %}
 <link rel="stylesheet" href="../static/css/politicos.css">
-<script type="module" src="../static/javascript/filtros.js" defer></script>
+<script type="module" src="../static/javascript/politicos.js" defer></script>
 {% endblock %}
 
 {% block content %}
@@ -11,8 +11,8 @@
   <aside class="sidebar">
       <div class="filtros">
         <h2>Filtros</h2>
-        <input type="text" class="form-control mb-3" placeholder="Procurar...">
-        <h3>Vereadores</h3>
+        <input type="text" class="filter-box" placeholder="Procurar...">
+        <h3>Vereadores:</h3>
         <!-- =======Checkbox======= -->
         <div class="checkbox-container" id="checkboxContainer">
           <!-- =====checkboxes do js===== -->
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="card-content">
-            <h2 class="name">Amélia Naomi</h2>
+            <h2 class="name">Ver. Robertinho da Padoca</h2>
             <p class="descricao">Partido: PT</p>
         <a href="/perfil/2"><button class="button">Ver Mais </button></a>
         </div>
@@ -53,7 +53,7 @@
                 <img src="../static/img/amelia_naomi.jpg" alt="imagem-card-político" class="card-img">
             </div>
         </div>
-        <div class="card-content">
+        <div class="card-content" >
             <h2 class="name">Amélia Naomi</h2>
             <p class="descricao">Partido: PT</p>
         <a href="/perfil/2"><button class="button">Ver Mais </button></a>

@@ -8,24 +8,24 @@ body {
 .flex-container{
   display: flex;
   max-width: 100%;
-  gap: 125px;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sidebar{
-  flex: 0 1 350px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 0 0 0;
-  height: 100vh;
+  justify-content: center;
+  height: 20vh;
+  min-width: 100vw;
   border-right: solid 1px #000;
-  max-width: 330px;
   text-align: justify;
 }
+
 section.politicos{
-  flex: 1;
-  max-width: 1000px;
-  padding:20px 0px 0px 20px;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
   width: 100%;
   box-sizing: border-box;
 }
@@ -33,10 +33,11 @@ section.politicos{
 .resultados{
   
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: auto;
   row-gap: 30px;
-  
+  width: 95%; 
 }
 
 /* ===============CARD=============== */
@@ -44,7 +45,7 @@ section.politicos{
   background-color: #FFF ;
   border-radius: 25px;
   width: 17rem;
-  height: 22rem;
+  height: 23rem;
   border: solid 1px #000;
   box-shadow: #000;
 }
@@ -110,10 +111,12 @@ section.politicos{
   font-weight: 500;
   color: #323334;
   padding: 6px;
+  text-align: center;
+  width: 90%;
 }
 
 .descricao{
-  font-size: 14px;
+  font-size: 13px;
   color: #707070;
   text-align: center;
   padding-top: 10px;
@@ -143,10 +146,16 @@ section.politicos{
   align-items: start;
   justify-content: space-evenly;
 }
-.checkbox-container{
-  font-size: 18px;
+.filter-box{
+  font-size: 20px;
+  font-weight: 600;
+  width: 90dvw;
+  padding: 5px 40px 5px 10px;
+  border: none;
+  box-sizing: border-box;
+  height: 25px;
+  border-radius: 50px;
+  
 }
-.checkbox-container label{
-  padding: 10px;
-}
+
 /* ===============FILTROS-FIM===============*/
