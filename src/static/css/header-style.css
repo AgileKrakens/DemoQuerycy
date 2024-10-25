@@ -232,7 +232,7 @@ header{
     .nav-bar ul {
         display: block;
         width: fit-content;
-        margin: 55px auto 0 auto;
+        margin: 15px auto 0 auto;
         text-align: center;
         transition: 0.5s;
         opacity: 0;
@@ -243,7 +243,9 @@ header{
     .nav-bar ul li a{
         margin-bottom: 15px;
     }
-
+    .nav-bar ul li{
+        padding: 10px;
+    }
     .search-box input[type="text"]{
         width: 85vw;
         font-size: 18px;

@@ -13,7 +13,7 @@
     <!-- Para referenciar arquivos estáticos (como arquivos CSS), a maneira correta no Flask é usar {{ url_for('static', filename='path/to/file') }} -->
     {% block additional_styles %}
     {% endblock %}
-
+    
     <script type="module" src="{{ url_for('static', filename='javascript/autocomplete.js') }}"></script>
     
 </head>
@@ -52,4 +52,5 @@
         {% block content %}
         {% endblock %}
     </main>
+    <script src="{{ url_for('static', filename='javascript/header-script.js') }}"></script>
 </body>
