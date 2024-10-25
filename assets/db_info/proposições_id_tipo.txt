@@ -1,0 +1,9 @@
+319 Indicação
+340 Requerimento
+341 Moção
+
+tipo=
+
+22 Lei Ordinária
+25 Decreto Legislativo
+29 Emenda à Lei Orgânica

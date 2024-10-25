@@ -1,0 +1,22 @@
+1137 Ver. Amélia Naomi
+1140 Ver. Dulce Rita
+1141 Ver. Fernando Petiti
+1144 Ver. Juvenil Silvério
+1145 Ver. Lino Bispo
+1148 Ver. Marcão da Academia
+1151 Ver. Robertinho da Padaria
+1152 Ver. Roberto do Eleven1156 Ver. Walter Hayashi
+1160 Ver. Juliana Fraga
+1274 Ver. Zé Luis
+3702 Ver. Dr. José Claudio
+3703 Ver. Fabião Zagueiro
+3704 Ver. Júnior da Farmácia
+3705 Ver. Marcelo Garcia
+3706 Ver. Milton Vieira Filho
+3707 Ver. Rafael Pascucci
+3708 Ver. Renato Santiago
+3709 Ver. Roberto Chagas
+3710 Ver. Thomaz Henrique
+4140 Ver. Rogerio ACASEM
+
+autor=
