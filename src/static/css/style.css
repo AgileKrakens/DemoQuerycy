@@ -6,16 +6,15 @@ body{
 main{
     width: 100vw;
     height: 100vh;
-    padding-top: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
 }
 h1{
-    padding-top: 70px;
     letter-spacing: 0.1em;
+    text-align: center;
 }
 .titulo{
     display: flex;
@@ -27,6 +26,7 @@ h1{
 .titulo p{
     padding: 0;
     padding-left: 10px;
+    text-align: center;
 }
 /* ------------------CARD-------------------- */
 .card{
@@ -74,8 +74,7 @@ h1{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #4067; /* outra cor: #000*/
+    border-radius: 50%; 
 }
 
 .image-content, .card-content{
@@ -111,12 +110,12 @@ h1{
     margin: 0 40px;
     overflow: hidden;
     border-radius: 20px;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 .slide-container{
     max-width: 1440px;
     width: 100%;
-    padding: 40px 0;
+    padding: 0 0 0 40px;
     
 }
 
@@ -179,10 +178,7 @@ h1{
     }
     .slide-content{
        margin: 0 10px; 
-       padding: 20px 0 25px 0;
-    }
-    .titulo{
-        align-items: flex-start;
+       padding-bottom: 25px;
     }
     
     h1 {

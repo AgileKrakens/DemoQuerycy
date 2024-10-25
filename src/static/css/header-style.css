@@ -152,7 +152,7 @@ header{
         border: 0;
     }
     .search-box input[type="text"]{
-        width: 250px;
+        width: 280px;
         font-size: 15px;
     }
 }
@@ -182,13 +182,13 @@ header{
         border-bottom-right-radius: 30px;
     }
     .nav-bar.active{
-        height: 230px;
+        height: 250px;
 
     }
     .nav-bar ul {
         display: block;
         width: fit-content;
-        margin: 0px auto 0 auto;
+        margin: 15px auto 0 auto;
         text-align: center;
         transition: 0.5s;
         opacity: 0;
@@ -198,6 +198,9 @@ header{
     }
     .nav-bar ul li a{
         margin-bottom: 15px;
+    }
+    .nav-bar ul li{
+        padding: 5px;
     }
 }
 
