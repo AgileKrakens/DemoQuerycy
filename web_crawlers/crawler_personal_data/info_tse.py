@@ -19,17 +19,20 @@ def web_driver(url2):
 def nome_social(url2):
     driver = web_driver(url2)
     data = driver.find_element(By.XPATH, '//*[@id="basicInformationSection"]/div[2]/dvg-candidato-dados/div/div[1]/label[2]').text
-    return data, driver.quit()
+    driver.quit()
+    return data
 
 def data_nasc(url2):
     driver = web_driver(url2)
     data = driver.find_element(By.XPATH, '//*[@id="basicInformationSection"]/div[2]/dvg-candidato-dados/div/div[2]/label[2]').text
-    return data, driver.quit()
+    driver.quit()
+    return data
     
 def ocupacao(url2):
     driver = web_driver(url2)
     data = driver.find_element(By.XPATH, '//*[@id="basicInformationSection"]/div[2]/dvg-candidato-dados/div/div[7]/label[2]').text
-    return data, driver.quit()
+    driver.quit()
+    return data
     
 def hist_mandatos(url2):
     driver = web_driver(url2)
@@ -47,6 +50,5 @@ def hist_mandatos(url2):
             result.append(line[:index].strip())
         else:
             result.append(line.strip())
-        
-            
+         
     return '\n'.join(result)

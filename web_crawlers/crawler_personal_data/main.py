@@ -25,39 +25,41 @@ print('''
 ''')
 
 def scrap(url, url2):
-    dados_string = info.personal_data(url)
-    dados_presenca = info.presence_stats(url)
-    comissoes = info.comissoes(url)
+    dados_string = info_camara.personal_data(url)
+    dados_presenca = info_camara.presence_stats(url)
+    comissoes = info_camara.comissoes(url)
     
     dados = {
         'nome': re.search(r'civil:(.*)', dados_string).group(1).strip(),
-        'nome_social':
-        'data_nasc':
-        'ocupação': 
-        'partido': info.partido(url)
+        'nome_social': info_tse.nome_social(url2),
+        'data_nasc': info_tse.data_nasc(url2),
+        'ocupação': info_tse.ocupacao(url2),
+        'partido': info_camara.partido(url),
         'telefone': re.findall(r'\(\d{2}\)\s\d{4}-\d{4}', dados_string),
         'email': re.search(r'E-mail:(.*)', dados_string).group(1).strip() if re.search(r'E-mail:(.*)', dados_string) else '',
-        'comissoes': re.findall(r'Cargo: (.*?) \((.*?)\)\nComissão: (.*?)-'
-        'presencas': [x for x in dados_presenca[:dados_presenca.index('Falta')] if x.isdigit()]
-        'ausencias': [x for x in dados_presenca[dados_presenca.index('Falta'):] if x.isdigit()]
-        'mandatos': 
+        'comissoes': re.findall(r'Cargo: (.*?) \((.*?)\)\nComissão: (.*?)-', comissoes),
+        'presencas': [x for x in dados_presenca[:dados_presenca.index('Falta')] if x.isdigit()],
+        'ausencias': [x for x in dados_presenca[dados_presenca.index('Falta'):] if x.isdigit()],
+        'mandatos': info_tse.hist_mandatos(url2)
     }
 
     file = f"{dados['nome'].replace(' ', '_').lower()}.json"
     
-    with open(f"/home/kali/Desktop/DemoQuerycy/src/data/vereadores/{file}", 'w', encoding='utf-8') as json_file:
+    with open(f"/home/kali/Desktop/DemoQuerycy_craw/src/data/json_files/{file}", 'w', encoding='utf-8') as json_file:
         json.dump(dados, json_file, ensure_ascii=False, indent=4)
         
-    print(f"\n{dados['nome']} data collected!")
-    print(dados)
+    print(f"\n{dados['nome_social']} data collected!")
 
-def read_urls(): #Incluir url2 no loop
-    urls = sys.stdin.read().splitlines()
-    
-    for url in urls:
+def read_urls(urls_file, urls2_file):
+    with open(urls_file, 'r') as f1, open(urls2_file, 'r') as f2:
+        urls = f1.read().splitlines()
+        urls2 = f2.read().splitlines()
+
+    for url, url2 in zip(urls, urls2):
         try:
-            scrap(url)
+            scrap(url, url2)
         except Exception as e:
-            print(f"fail to process {url}: {e}")
+            print(f"fail to process: {e}")
 
-read_urls()
+read_urls('camara_endpoints.txt', 'tse_endpoints.txt')
+
