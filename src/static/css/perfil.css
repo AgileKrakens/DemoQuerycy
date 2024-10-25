@@ -89,7 +89,14 @@ body {
 .content {
     width: 70%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.info-pessoal{
+    margin-top: 15px;
 }
 
 /* Centralizando o texto no Histórico de Mandatos */
@@ -118,7 +125,7 @@ body {
 .presenca,
 .leis,
 .comissoes {
-    margin-bottom: 30px;
+    width: 100%;
 }
 
 /* Estilo dos títulos */
@@ -140,25 +147,20 @@ h2 {
 /* card presença */
 .container-presença {
     display: flex;
-    width: 50%;
-    max-width: 600px;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-
-
-
 .card-presença {
+    display: flex;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 8px;
     background-color: #c2c2c2bd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
-    max-width: 400px;
-    width: 100%;
+    align-items: center;
 
 }
 
@@ -179,9 +181,12 @@ h2 {
     font-weight: bold;
 }
 
+.container-presença, .card-presença, .card-body-presença{
+    width: 65%;
+    
+}
+
 .row {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 10px;
 }
 
@@ -223,14 +228,6 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-a {
-    color: #000000;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
 
 .table-container {
     max-height: 300px;
@@ -241,18 +238,18 @@ a:hover {
     /* Rolagem horizontal se necessário */
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 10px;
+    padding: 15px;
     background-color: #f9f9f9;
-    margin: 10px 0;
+    margin-top: 15px;
 }
 
 /* Comissões */
-ul {
+.comissoes ul {
     list-style-type: none;
     font-weight: bold;
 }
 
-ul li {
+.comissoes ul li {
     padding: 5px 0;
 }
 
