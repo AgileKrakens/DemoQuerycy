@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route(f'/perfil/<int:id_perfil>')
 def perfil_JSON(id_perfil):
    try:
-       with open(f'../src/data/json_files/{id_perfil}.json', 'r', encoding='utf-8') as f:
+       with open(f'../src/data/json_files/{id_perfil + 1}.json', 'r', encoding='utf-8') as f:
            dados = json.load(f)
        return render_template('perfil.html', perfil=dados)
    except FileNotFoundError:
@@ -23,7 +23,7 @@ def politicos():
    dados = []
    try:
        # Carregar todos os arquivos JSON
-       for filename in os.listdir(folder_path):
+       for filename in sorted(os.listdir(folder_path)):
            if filename.endswith('.json'):
                print(filename)
                with open(os.path.join(folder_path, filename), 'r', encoding='utf-8') as f:
@@ -32,8 +32,9 @@ def politicos():
        raise e
     #    return "Diretório não encontrado", 404
    except UnicodeDecodeError as e:
-       return f"Erro ao ler arquivo: {str(e)}", 500
-   return render_template('politicos.html', politicos=dados)
+       return f"Erro ao ler arquivo: {str(e)}", 500 
+   print(dados)
+   return render_template('politicos.html', politicos=sorted(dados,key=lambda x:x['nome'][5:]))
  
  
 if __name__ == '__main__':
