@@ -19,7 +19,7 @@ def index():
 
 @app.route('/pagina-politicos')
 def politicos():
-   folder_path = 'C:\\Users\\mates\\Desktop\\DemoQuerycy\\src\\data\\json_files'
+   folder_path = 'data\json_files'
    dados = []
    try:
        # Carregar todos os arquivos JSON

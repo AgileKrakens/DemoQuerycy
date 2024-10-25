@@ -31,7 +31,6 @@ section.politicos{
 }
 
 .resultados{
-  
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -112,7 +111,7 @@ section.politicos{
   color: #323334;
   padding: 6px;
   text-align: center;
-  width: 90%;
+  text-wrap: wrap;
 }
 
 .descricao{

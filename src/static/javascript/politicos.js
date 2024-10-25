@@ -6,7 +6,7 @@ function ajustarTamanhoFonte() {
         const comprimentoTexto = elemento.textContent.length;
 
         let tamanhoFonte = 18;
-        const tamanhoMinimoFonte = 14;
+        const tamanhoMinimoFonte = 15;
         const tamanhoMaximoFonte = 18;
 
         if (comprimentoTexto > 15) {
