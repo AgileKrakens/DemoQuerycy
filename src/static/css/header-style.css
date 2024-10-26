@@ -183,7 +183,7 @@ header{
     }
     .nav-bar.active{
         height: 250px;
-
+        z-index: 2;
     }
     .nav-bar ul {
         display: block;
@@ -201,6 +201,7 @@ header{
     }
     .nav-bar ul li{
         padding: 5px;
+        width: 300px;
     }
 }
 
