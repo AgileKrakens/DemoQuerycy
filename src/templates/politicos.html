@@ -3,6 +3,7 @@
 {% block additional_styles %}
     <link rel="stylesheet" href="../static/css/politicos.css">
     <script type="module" src="../static/javascript/politicos.js" defer></script>
+    <script src="../static/javascript/search.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -10,9 +11,8 @@
         <!-- Sidebar com filtros -->
         <aside class="sidebar">
             <div class="filtros">
-                <h2>Filtros</h2>
+                <h2>Buscar</h2>
                 <input type="text" class="filter-box" placeholder="Procurar...">
-                
                 <h3>Vereadores:</h3>
             </div>
         </aside>
@@ -39,7 +39,7 @@
                             </a>
                         </div>
                     </div>
-                {% endfor %}
+                {% endfor %}  
             </div>
         </section>
     </section>
