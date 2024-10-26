@@ -4,22 +4,23 @@
 {% block additional_styles %}
 <link rel="stylesheet" href="../static/css/perfil.css">
 <link rel="stylesheet" href="../static/css/reset-perfil.css">
+<title> {{ perfil.nome }} </title>
 {% endblock %}
 
 {% block content %}
 <div class="container">
     <div class="sidebar">
-        <img src="../static/img/amelia_naomi.jpg" alt="Foto do Político" class="foto">
+        <img src=" {{ perfil.img }}" alt="Foto do Político" class="foto">
         <div class="card">
             <div class="card-head">
                 <h2>Informações pessoais</h2>
                 <div class="card-body">
-                    <p>Nome: {{perfil.nome}}</p>
-                    <p>Nome Social: Marcão da academia</p>
-                    <p>PT</p>
-                    <p>Data de nascimento: 45 anos</p>
-                    <p>Telefone: (11) 99999-9999</p>
-                    <p>Área profissional: </p>
+                    <p>Nome: {{ perfil.nome }}</p>
+                    <p>Nome Social: {{ perfil.nome_social }}</p>
+                    <p>{{ perfil.partido }}</p>
+                    <p>Data de nascimento: {{ perfil.data_nasc }}</p>
+                    <p>Telefone: {{ perfil.telefone[0] }}</p>
+                    <p>Área profissional: {{ perfil.ocupação }} </p>
                 </div>
             </div>
         </div>
@@ -28,9 +29,11 @@
                 <div class="comissoes">
                     <h2>Comissões</h2>
                     <ul>
-                        <li>Educação - Membro - 15/02/2023</li>
-                        <li>Saúde - Presidente - 10/03/2023</li>
-                        <li>Transporte - Membro - 01/04/2023</li>
+                        {% for k in perfil.comissoes %}
+                            <li> 
+                                {{ k[0] + ' - ' + k[1] }} <br> {{ k[2]}} 
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -43,12 +46,13 @@
                 <div class="card-body-presença">
                     <h5 class="card-title-presença">Falta/Presença nas sessões</h5>
                     <div class="row">
-                        <div class="label" id="presença">% de presenças:</div>
-                        <div class="value">▲ da média dos vereadores</div>
+                        <div class="label" id="presença">% de presenças: {{ porcentagem_presença }}
+                        </div>
+                        <!-- <div class="value">▲ da média dos vereadores</div> SPRINT 3-->
                     </div>
                     <div class="row">
-                        <div class="label" id="faltas">% de faltas:</div>
-                        <div class="value">▲ da média dos vereadores</div>
+                        <div class="label" id="faltas">% de faltas: {{ porcentagem_ausencia }}</div>
+                        <!-- <div class="value">▲ da média dos vereadores</div> SPRINT 3-->
                     </div>
                 </div>
             </div>
@@ -155,20 +159,9 @@
         <div class="info-pessoal">
             <h2 id="">Histórico de mandatos</h2>
             <ul id="alinhar">
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-                <li> Candidato a Vereador/São José Dos Campos partido PT em 2024</li>
-
+                {% for k in perfil.mandatos.split('\n') %}
+                    <li> {{ k }} <br></li>
+                {% endfor %}
             </ul>
         </div>
     </div>

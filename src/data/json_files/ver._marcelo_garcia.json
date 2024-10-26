@@ -1,0 +1,53 @@
+{
+    "nome": "Ver. Marcelo Garcia",
+    "nome_social": "MARCELO MARCELINO GARCIA",
+    "data_nasc": "10/06/1974",
+    "ocupação": "Sacerdote ou Membro de Ordem ou Seita Religiosa",
+    "partido": "PARTIDO RENOVAÇÃO DEMOCRÁTICA (PRD)",
+    "telefone": [
+        "(12) 3925-6625"
+    ],
+    "email": "marcelogarcia@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ECONOMIA, FINANÇAS E ORÇAMENTO "
+        ],
+        [
+            "Presidente",
+            "01/01/2022 a 31/12/2024",
+            "COMISSÃO DE MEIO AMBIENTE "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "79",
+        "2022",
+        "84",
+        "2021",
+        "86"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "1",
+        "2022",
+        "0",
+        "2021",
+        "0"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PRD em 2024\nCandidato a Vereador/São José Dos Campos partido PTB em 2020\nCandidato a Vereador/São José Dos Campos partido PTB em 2016 Suplente",
+    "img": "../static/img/marcelo_garcia.jpg"
+}

@@ -4,25 +4,40 @@ import os
 
 app = Flask(__name__)
 
-@app.route(f'/perfil/<int:id_perfil>')
-def perfil_JSON(id_perfil):
-   try:
-       with open(f'../src/data/json_files/{id_perfil + 1}.json', 'r', encoding='utf-8') as f:
-           dados = json.load(f)
-       return render_template('perfil.html', perfil=dados)
-   except FileNotFoundError:
-       return "Perfil não encontrado", 404
-   
+@app.route('/perfil/<nome>')
+def json_perfil(nome):
+    try:
+        with open(f'../src/data/json_files/{nome}.json', encoding='utf-8') as f:
+            dados = json.load(f)
+            total_presença = 0
+            porcentagem_presença = 0
+            total_ausencia = 0
+            porcentagem_ausencia = 0
+
+            for k in range(1,len(dados['presencas']),2):
+                total_presença += int(dados['presencas'][k])
+            
+            for k in range(1,len(dados['ausencias']),2):
+                total_ausencia += int(dados['ausencias'][k])
+
+            porcentagem_presença = round(total_presença * 100 / (total_presença + total_ausencia),2)
+
+            porcentagem_ausencia = round(total_ausencia * 100 / (total_ausencia + total_presença),2)
+
+        return render_template('perfil.html', perfil=dados, porcentagem_presença=porcentagem_presença, porcentagem_ausencia=porcentagem_ausencia)
+    except FileNotFoundError:
+        return "perfil não encontrado :/", 404
+
 @app.route('/')
 def index():
    return render_template('home.html')
 
 @app.route('/pagina-politicos')
 def politicos():
-   folder_path = 'data\json_files'
+   folder_path = 'data/json_files'
    dados = []
    try:
-       # Carregar todos os arquivos JSON
+
        for filename in sorted(os.listdir(folder_path)):
            if filename.endswith('.json'):
                print(filename)
@@ -30,10 +45,9 @@ def politicos():
                    dados.append(json.load(f))
    except FileNotFoundError as e:
        raise e
-    #    return "Diretório não encontrado", 404
+    
    except UnicodeDecodeError as e:
        return f"Erro ao ler arquivo: {str(e)}", 500 
-   print(dados)
    return render_template('politicos.html', politicos=sorted(dados,key=lambda x:x['nome'][5:]))
  
  

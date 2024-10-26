@@ -1,0 +1,58 @@
+{
+    "nome": "Ver. Dr. José Cláudio",
+    "nome_social": "JOSÉ CLAUDIO MANCILHA DE FARIA BARBOSA",
+    "data_nasc": "30/09/1966",
+    "ocupação": "Médico",
+    "partido": "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA (PSDB)",
+    "telefone": [
+        "(12) 3925-6701"
+    ],
+    "email": "joseclaudio@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE SAÚDE "
+        ],
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE MEIO AMBIENTE "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "80",
+        "2022",
+        "80",
+        "2021",
+        "82"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "4",
+        "2021",
+        "4"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PSDB em 2024 Suplente\nCandidato a Vereador/São José Dos Campos partido PSDB em 2020\nCandidato a Deputado Federal/São Paulo partido PV em 2018 Suplente\nCandidato a Vereador/São José Dos Campos partido DEM em 2016 Não eleito\nCandidato a Vereador/São José Dos Campos partido PSB em 2012 Suplente\nCandidato a Deputado Federal/São Paulo partido PP em 2010 Suplente\nCandidato a Vice-prefeito/Paraibuna partido PP em 2008\nCandidato a Vice-prefeito/Paraibuna partido PMDB em 2004",
+    "img": "../static/img/jose_claudio.jpg"
+}

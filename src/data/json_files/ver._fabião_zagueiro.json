@@ -1,0 +1,53 @@
+{
+    "nome": "Ver. Fabião Zagueiro",
+    "nome_social": "FABIO LEANDRO RAMOS",
+    "data_nasc": "06/06/1975",
+    "ocupação": "Outros",
+    "partido": "PARTIDO SOCIAL DEMOCRÁTICO (PSD)",
+    "telefone": [
+        "(12) 3925-6570"
+    ],
+    "email": "fabiaozagueiro@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE EDUCAÇÃO E PROMOÇÃO SOCIAL "
+        ],
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE JUSTIÇA, REDAÇÃO E DIREITOS HUMANOS "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "80",
+        "2022",
+        "84",
+        "2021",
+        "86"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PSD em 2024\nCandidato a Vereador/São José Dos Campos partido SOLIDARIEDADE em 2020\nCandidato a Vereador/São José Dos Campos partido SD em 2016 Suplente\nCandidato a Vereador/São José Dos Campos partido PV em 2012 Suplente",
+    "img": "../static/img/fabiao_zagueiro.jpg"
+}

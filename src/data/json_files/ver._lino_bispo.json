@@ -1,0 +1,83 @@
+{
+    "nome": "Ver. Lino Bispo",
+    "nome_social": "LINO BISPO DA ROCHA",
+    "data_nasc": "31/08/1962",
+    "ocupação": "Vereador",
+    "partido": "PARTIDO LIBERAL (PL)",
+    "telefone": [
+        "(12) 3925-6335",
+        "(12) 3925-6620"
+    ],
+    "email": "linobispo@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE PLANEJAMENTO URBANO, OBRAS E TRANSPORTES "
+        ],
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE MEIO AMBIENTE "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "60",
+        "2023",
+        "76",
+        "2022",
+        "76",
+        "2021",
+        "82",
+        "2020",
+        "87",
+        "2019",
+        "80",
+        "2018",
+        "77",
+        "2017",
+        "72"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "2",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2020",
+        "0",
+        "2019",
+        "0",
+        "2018",
+        "2",
+        "2017",
+        "0",
+        "2024",
+        "2",
+        "2023",
+        "2",
+        "2022",
+        "8",
+        "2021",
+        "4",
+        "2020",
+        "3",
+        "2019",
+        "9",
+        "2018",
+        "0",
+        "2017",
+        "5"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PL em 2024\nCandidato a Vereador/São José Dos Campos partido PL em 2020\nCandidato a Deputado Estadual/São Paulo partido PR em 2018 Suplente\nCandidato a Vereador/São José Dos Campos partido PR em 2016\nCandidato a Deputado Federal/São Paulo partido PR em 2014 Suplente\nCandidato a Vereador/São José Dos Campos partido PMN em 2012 Não eleito\nCandidato a Vereador/São José Dos Campos partido PMDB em 2008 Não eleito\nCandidato a Vereador/São José Dos Campos partido PHS em 2004",
+    "img": "../static/img/lino_bispo.jpg"
+}

@@ -1,0 +1,47 @@
+{
+    "nome": "Ver. Rogério da ACASEM",
+    "nome_social": "ROGÉRIO CRISTÓVÃO ALVES",
+    "data_nasc": "25/07/1975",
+    "ocupação": "Técnico de Enfermagem e Assemelhados (Exceto Enfermeiro)",
+    "partido": "PARTIDO PROGRESSISTA (PROGRESSISTAS)",
+    "telefone": [
+        "(12) 3925-6748"
+    ],
+    "email": "",
+    "comissoes": [
+        [
+            "Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE CULTURA E ESPORTES "
+        ],
+        [
+            "Suplente de Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE PLANEJAMENTO URBANO, OBRAS E TRANSPORTES "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "60",
+        "2023",
+        "71",
+        "2022",
+        "24"
+    ],
+    "ausencias": [
+        "2024",
+        "1",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2024",
+        "1",
+        "2023",
+        "9",
+        "2022",
+        "1"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PP em 2024\nCandidato a Vereador/São José Dos Campos partido MDB em 2020 Suplente",
+    "img": "../static/img/rogerio_acasem.jpg"
+}

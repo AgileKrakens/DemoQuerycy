@@ -1,0 +1,78 @@
+{
+    "nome": "Ver. Walter Hayashi",
+    "nome_social": "WALTER KATSUNORI HAYASHI",
+    "data_nasc": "24/03/1946",
+    "ocupação": "Vereador",
+    "partido": "PARTIDO UNIÃO BRASIL (UNIÃO BRASIL)",
+    "telefone": [
+        "(12) 3925-6525",
+        "(12) 3925-6525"
+    ],
+    "email": "walterhayashi@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE SAÚDE "
+        ],
+        [
+            "Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE JUSTIÇA, REDAÇÃO E DIREITOS HUMANOS "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "61",
+        "2023",
+        "80",
+        "2022",
+        "77",
+        "2021",
+        "86",
+        "2020",
+        "60",
+        "2019",
+        "88",
+        "2018",
+        "78",
+        "2017",
+        "77"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "1",
+        "2021",
+        "0",
+        "2020",
+        "0",
+        "2019",
+        "0",
+        "2018",
+        "0",
+        "2017",
+        "0",
+        "2024",
+        "1",
+        "2023",
+        "0",
+        "2022",
+        "6",
+        "2021",
+        "0",
+        "2020",
+        "30",
+        "2019",
+        "1",
+        "2018",
+        "1",
+        "2017",
+        "0"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido UNIÃO em 2024 Suplente\nCandidato a Vereador/São José Dos Campos partido PSC em 2020\nCandidato a Vereador/São José Dos Campos partido PSC em 2016\nCandidato a Vereador/São José Dos Campos partido PSB em 2012\nCandidato a Deputado Estadual/São Paulo partido PSB em 2010 Suplente\nCandidato a Vereador/São José Dos Campos partido PSB em 2008 Média\nCandidato a Vereador/São José Dos Campos partido PSB em 2004",
+    "img": "../static/img/walter_hayashi.jpg"
+}

@@ -1,0 +1,53 @@
+{
+    "nome": "Ver. Milton Vieira Filho",
+    "nome_social": "RICELLI MARTINS PINTO",
+    "data_nasc": "02/01/1983",
+    "ocupação": "Empresário",
+    "partido": "REPUBLICANOS (REPUBLICANOS)",
+    "telefone": [
+        "(12) 3925-6529"
+    ],
+    "email": "mvfilho@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE EDUCAÇÃO E PROMOÇÃO SOCIAL "
+        ],
+        [
+            "Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE SAÚDE "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "56",
+        "2023",
+        "75",
+        "2022",
+        "81",
+        "2021",
+        "78"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "1",
+        "2022",
+        "1",
+        "2021",
+        "1",
+        "2024",
+        "6",
+        "2023",
+        "4",
+        "2022",
+        "2",
+        "2021",
+        "7"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido REPUBLICANOS em 2024\nCandidato a Vereador/São José Dos Campos partido REPUBLICANOS em 2020",
+    "img": "../static/img/milton_vieira.jpg"
+}

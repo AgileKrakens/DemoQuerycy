@@ -1,0 +1,63 @@
+{
+    "nome": "Ver. Thomaz Henrique",
+    "nome_social": "THOMAZ HENRIQUE BARBOSA DA SILVA",
+    "data_nasc": "14/12/1990",
+    "ocupação": "Jornalista e Redator",
+    "partido": "PARTIDO LIBERAL (PL)",
+    "telefone": [
+        "(12) 3925-6611"
+    ],
+    "email": "thomazhenrique@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE EDUCAÇÃO E PROMOÇÃO SOCIAL "
+        ],
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Suplente de Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE PLANEJAMENTO URBANO, OBRAS E TRANSPORTES "
+        ],
+        [
+            "Suplente de Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ECONOMIA, FINANÇAS E ORÇAMENTO "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "58",
+        "2023",
+        "79",
+        "2022",
+        "81",
+        "2021",
+        "85"
+    ],
+    "ausencias": [
+        "2024",
+        "1",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2024",
+        "3",
+        "2023",
+        "1",
+        "2022",
+        "3",
+        "2021",
+        "1"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PL em 2024\nCandidato a Vereador/São José Dos Campos partido NOVO em 2020",
+    "img": "../static/img/thomaz_henrique.jpg"
+}

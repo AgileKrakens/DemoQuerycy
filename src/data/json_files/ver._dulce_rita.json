@@ -1,0 +1,77 @@
+{
+    "nome": "Ver. Dulce Rita",
+    "nome_social": "DULCE RITA CHAVES DE ANDRADE DABKIWICZ",
+    "data_nasc": "26/05/1950",
+    "ocupação": "Vereador",
+    "partido": "PARTIDO UNIÃO BRASIL (UNIÃO BRASIL)",
+    "telefone": [
+        "(12) 3925-6534"
+    ],
+    "email": "dulce.rita@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE SAÚDE "
+        ],
+        [
+            "Suplente de Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE JUSTIÇA, REDAÇÃO E DIREITOS HUMANOS "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "56",
+        "2023",
+        "74",
+        "2022",
+        "83",
+        "2021",
+        "77",
+        "2020",
+        "84",
+        "2019",
+        "85",
+        "2018",
+        "74",
+        "2017",
+        "72"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2020",
+        "1",
+        "2019",
+        "0",
+        "2018",
+        "0",
+        "2017",
+        "0",
+        "2024",
+        "6",
+        "2023",
+        "6",
+        "2022",
+        "1",
+        "2021",
+        "9",
+        "2020",
+        "5",
+        "2019",
+        "4",
+        "2018",
+        "4",
+        "2017",
+        "5"
+    ],
+    "mandatos": "Candidato a Vice-prefeito/São José Dos Campos partido UNIÃO em 2024 Não eleito\nCandidato a Deputado Estadual/São Paulo partido PSDB em 2022 Suplente\nCandidato a Vereador/São José Dos Campos partido PSDB em 2020\nCandidato a Vereador/São José Dos Campos partido PSDB em 2016\nCandidato a Vereador/São José Dos Campos partido PSDB em 2012\nCandidato a Vereador/São José Dos Campos partido PV em 2008\nCandidato a Vereador/São José Dos Campos partido PSB em 2004",
+    "img": "../static/img/dulce_rita.jpg"
+}

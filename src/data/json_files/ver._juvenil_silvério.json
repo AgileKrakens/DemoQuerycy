@@ -1,0 +1,83 @@
+{
+    "nome": "Ver. Juvenil Silvério",
+    "nome_social": "JUVENIL DE ALMEIDA SILVÉRIO",
+    "data_nasc": "28/05/1970",
+    "ocupação": "Vereador",
+    "partido": "PARTIDO SOCIAL DEMOCRÁTICO (PSD)",
+    "telefone": [
+        "(12) 3925-6565",
+        "(12) 3925-6565"
+    ],
+    "email": "juvenil@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE CULTURA E ESPORTES "
+        ],
+        [
+            "Suplente de Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ECONOMIA, FINANÇAS E ORÇAMENTO "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "78",
+        "2022",
+        "79",
+        "2021",
+        "80",
+        "2020",
+        "86",
+        "2019",
+        "84",
+        "2018",
+        "79",
+        "2017",
+        "75"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "3",
+        "2021",
+        "0",
+        "2020",
+        "1",
+        "2019",
+        "4",
+        "2018",
+        "0",
+        "2017",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "2",
+        "2022",
+        "2",
+        "2021",
+        "6",
+        "2020",
+        "3",
+        "2019",
+        "1",
+        "2018",
+        "0",
+        "2017",
+        "2"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PSD em 2024 Suplente\nCandidato a Deputado Estadual/São Paulo partido PSD em 2022 Suplente\nCandidato a Vereador/São José Dos Campos partido PSDB em 2020\nCandidato a Vereador/São José Dos Campos partido PSDB em 2016\nCandidato a Vereador/São José Dos Campos partido PSDB em 2012\nCandidato a Vereador/São José Dos Campos partido PSDB em 2008 Média\nCandidato a Vereador/São José Dos Campos partido PSDB em 2004 Média",
+    "img": "../static/img/juvenil_silverio.jpg"
+}

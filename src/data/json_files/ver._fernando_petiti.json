@@ -1,0 +1,76 @@
+{
+    "nome": "Ver. Fernando Petiti",
+    "nome_social": "FERNANDO LUIZ ISOPPO PETITI",
+    "data_nasc": "10/06/1970",
+    "ocupação": "Relações-Públicas",
+    "partido": "MOVIMENTO DEMOCRÁTICO BRASILEIRO (MDB)",
+    "telefone": [
+        "(12) 3925-6650"
+    ],
+    "email": "fernandopetiti@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE PLANEJAMENTO URBANO, OBRAS E TRANSPORTES "
+        ],
+        [
+            "Suplente de Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ECONOMIA, FINANÇAS E ORÇAMENTO "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "61",
+        "2023",
+        "73",
+        "2022",
+        "83",
+        "2021",
+        "81",
+        "2019",
+        "5",
+        "2018",
+        "75",
+        "2017",
+        "73"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2019",
+        "0",
+        "2018",
+        "0",
+        "2017",
+        "0",
+        "2024",
+        "1",
+        "2023",
+        "7",
+        "2022",
+        "1",
+        "2021",
+        "5",
+        "2019",
+        "0",
+        "2018",
+        "4",
+        "2017",
+        "4"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PSDB em 2024\nCandidato a Deputado Estadual/São Paulo partido MDB em 2022 Suplente\nCandidato a Vereador/São José Dos Campos partido MDB em 2020\nCandidato a Deputado Estadual/São Paulo partido MDB em 2018 Suplente\nCandidato a Vereador/São José Dos Campos partido PSDB em 2016\nCandidato a Vereador/São José Dos Campos partido PSDB em 2012\nCandidato a Vereador/São José Dos Campos partido PSDB em 2008\nCandidato a Vereador/São José Dos Campos partido PFL em 2004",
+    "img": "../static/img/fernando_petiti.jpg"
+}

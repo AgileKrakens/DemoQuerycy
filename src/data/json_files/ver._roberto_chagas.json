@@ -1,0 +1,58 @@
+{
+    "nome": "Ver. Roberto Chagas",
+    "nome_social": "ROBERTO DE ASSIS CHAGAS",
+    "data_nasc": "22/12/1979",
+    "ocupação": "Outros",
+    "partido": "PARTIDO LIBERAL (PL)",
+    "telefone": [
+        "(12) 3925-6607"
+    ],
+    "email": "robertochagas@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE CULTURA E ESPORTES "
+        ],
+        [
+            "Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ECONOMIA, FINANÇAS E ORÇAMENTO "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "80",
+        "2022",
+        "84",
+        "2021",
+        "82"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "4"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PL em 2024\nCandidato a Vereador/São José Dos Campos partido PL em 2020\nCandidato a Vereador/São José Dos Campos partido PSD em 2016 Suplente",
+    "img": "../static/img/roberto_chagas.jpg"
+}

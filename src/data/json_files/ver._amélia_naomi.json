@@ -1,0 +1,77 @@
+{
+    "nome": "Ver. Amélia Naomi",
+    "nome_social": "AMÉLIA NAOMI OMURA",
+    "data_nasc": "12/06/1960",
+    "ocupação": "Vereador",
+    "partido": "PARTIDO DOS TRABALHADORES (PT)",
+    "telefone": [
+        "(12) 3925-6588"
+    ],
+    "email": "amelia@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE EDUCAÇÃO E PROMOÇÃO SOCIAL "
+        ],
+        [
+            "Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE CULTURA E ESPORTES "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "60",
+        "2023",
+        "77",
+        "2022",
+        "84",
+        "2021",
+        "86",
+        "2020",
+        "88",
+        "2019",
+        "85",
+        "2018",
+        "76",
+        "2017",
+        "69"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2020",
+        "0",
+        "2019",
+        "2",
+        "2018",
+        "0",
+        "2017",
+        "0",
+        "2024",
+        "2",
+        "2023",
+        "3",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2020",
+        "2",
+        "2019",
+        "2",
+        "2018",
+        "3",
+        "2017",
+        "8"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PT em 2024\nCandidato a Vereador/São José Dos Campos partido PT em 2020\nCandidato a Deputado Federal/São Paulo partido PT em 2018 Suplente\nCandidato a Vereador/São José Dos Campos partido PT em 2016\nCandidato a Deputado Federal/São Paulo partido PT em 2014 Suplente\nCandidato a Vereador/São José Dos Campos partido PT em 2012\nCandidato a Vereador/São José Dos Campos partido PT em 2008\nCandidato a Vereador/São José Dos Campos partido PT em 2004",
+    "img": "../static/img/amelia_naomi.jpg"
+}

@@ -1,0 +1,53 @@
+{
+    "nome": "Ver. Júnior da Farmácia",
+    "nome_social": "BERNARDO CASTRO JUNIOR",
+    "data_nasc": "11/10/1973",
+    "ocupação": "Comerciante",
+    "partido": "MOVIMENTO DEMOCRÁTICO BRASILEIRO (MDB)",
+    "telefone": [
+        "(12) 3925-6610"
+    ],
+    "email": "juniordafarmacia@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE JUSTIÇA, REDAÇÃO E DIREITOS HUMANOS "
+        ],
+        [
+            "Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE MEIO AMBIENTE "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "80",
+        "2022",
+        "83",
+        "2021",
+        "83"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "1",
+        "2021",
+        "3"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido MDB em 2024 Não eleito\nCandidato a Vereador/São José Dos Campos partido PSL em 2020\nCandidato a Vereador/São José Dos Campos partido PRB em 2016 Suplente\nCandidato a Vereador/São José Dos Campos partido PR em 2012 Não eleito",
+    "img": "../static/img/junior_farmacia.jpg"
+}

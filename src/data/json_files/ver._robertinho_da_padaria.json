@@ -1,0 +1,82 @@
+{
+    "nome": "Ver. Robertinho da Padaria",
+    "nome_social": "ROBERTO DA PENHA RAMOS",
+    "data_nasc": "07/05/1968",
+    "ocupação": "Comerciante",
+    "partido": "PARTIDO RENOVAÇÃO DEMOCRÁTICA (PRD)",
+    "telefone": [
+        "(12) 3925-6747"
+    ],
+    "email": "",
+    "comissoes": [
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE SAÚDE "
+        ],
+        [
+            "Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE JUSTIÇA, REDAÇÃO E DIREITOS HUMANOS "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "59",
+        "2023",
+        "79",
+        "2022",
+        "83",
+        "2021",
+        "83",
+        "2020",
+        "89",
+        "2019",
+        "87",
+        "2018",
+        "78",
+        "2017",
+        "75"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "1",
+        "2020",
+        "0",
+        "2019",
+        "0",
+        "2018",
+        "0",
+        "2017",
+        "0",
+        "2024",
+        "3",
+        "2023",
+        "1",
+        "2022",
+        "1",
+        "2021",
+        "2",
+        "2020",
+        "1",
+        "2019",
+        "2",
+        "2018",
+        "1",
+        "2017",
+        "2"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido CIDADANIA em 2020\nCandidato a Vereador/São José Dos Campos partido PPS em 2016\nCandidato a Vereador/São José Dos Campos partido PPS em 2012\nCandidato a Vereador/São José Dos Campos partido PPS em 2008\nCandidato a Vereador/São José Dos Campos partido PMDB em 2004",
+    "img": "../static/img/robertinho_padaria.jpg"
+}

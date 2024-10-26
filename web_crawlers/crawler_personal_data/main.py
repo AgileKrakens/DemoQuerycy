@@ -45,10 +45,11 @@ def scrap(url, url2):
 
     file = f"{dados['nome'].replace(' ', '_').lower()}.json"
     
-    with open(f"/home/kali/Desktop/DemoQuerycy_craw/src/data/json_files/{file}", 'w', encoding='utf-8') as json_file:
+    with open(f"/home/kali/Desktop/DemoQuerycy/src/data/json_files/{file}", 'w', encoding='utf-8') as json_file:
         json.dump(dados, json_file, ensure_ascii=False, indent=4)
         
     print(f"\n{dados['nome_social']} data collected!")
+    print(f"{dados['nome']}\n{dados['ocupação']}\n{dados['partido']}\n{dados['telefone']}\n{dados['email']}\n{dados['mandatos']}")
 
 def read_urls(urls_file, urls2_file):
     with open(urls_file, 'r') as f1, open(urls2_file, 'r') as f2:

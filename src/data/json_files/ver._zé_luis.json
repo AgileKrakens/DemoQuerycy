@@ -1,0 +1,70 @@
+{
+    "nome": "Ver. Zé Luis",
+    "nome_social": "JOSE LUIS NUNES DO COUTO",
+    "data_nasc": "14/01/1970",
+    "ocupação": "Vereador",
+    "partido": "PARTIDO SOCIAL DEMOCRÁTICO (PSD)",
+    "telefone": [
+        "(12) 3925-6770"
+    ],
+    "email": "zeluis@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Suplente de Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE EDUCAÇÃO E PROMOÇÃO SOCIAL "
+        ],
+        [
+            "Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE SAÚDE "
+        ],
+        [
+            "Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE JUSTIÇA, REDAÇÃO E DIREITOS HUMANOS "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "80",
+        "2022",
+        "84",
+        "2021",
+        "86",
+        "2020",
+        "90",
+        "2019",
+        "14"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2020",
+        "0",
+        "2019",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2020",
+        "0",
+        "2019",
+        "0"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PSD em 2024\nCandidato a Vereador/São José Dos Campos partido PSD em 2020\nCandidato a Vereador/São José Dos Campos partido PSD em 2016 Suplente\nCandidato a Vice-prefeito/São José Dos Campos partido DEM em 2012 Não eleito\nCandidato a Vereador/São José Dos Campos partido DEM em 2008 Suplente\nCandidato a Vereador/São José Dos Campos partido PMN em 2004",
+    "img": "../static/img/ze_luis.jpg"
+}

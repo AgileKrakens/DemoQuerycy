@@ -1,0 +1,58 @@
+{
+    "nome": "Ver. Rafael Pascucci",
+    "nome_social": "RAFAEL AFONSO PASCUCCI",
+    "data_nasc": "30/05/1984",
+    "ocupação": "Servidor Público Municipal",
+    "partido": "PARTIDO SOCIAL DEMOCRÁTICO (PSD)",
+    "telefone": [
+        "(12) 3925-6700"
+    ],
+    "email": "pascucci@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Suplente de Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE PLANEJAMENTO URBANO, OBRAS E TRANSPORTES "
+        ],
+        [
+            "Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ECONOMIA, FINANÇAS E ORÇAMENTO "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "78",
+        "2022",
+        "82",
+        "2021",
+        "76"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "2",
+        "2022",
+        "2",
+        "2021",
+        "10"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PSD em 2024\nCandidato a Vereador/São José Dos Campos partido PTB em 2020",
+    "img": "../static/img/rafael_pascucci.jpg"
+}

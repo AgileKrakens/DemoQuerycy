@@ -47,7 +47,6 @@ section.politicos{
   height: 23rem;
   border: solid 1px #000;
   box-shadow: #000;
-  z-index: -1;
 }
 .overlay{
   position: absolute;

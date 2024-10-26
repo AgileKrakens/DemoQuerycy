@@ -33,8 +33,8 @@
                         <!-- Conteúdo textual do card -->
                         <div class="card-content">
                             <h2 class="name">{{ politico.nome }}</h2>
-                            <p class="descricao">Partido: {{ politico.partido }}</p>
-                            <a href="/perfil/{{ loop.index }}">
+                            <p class="descricao">Partido: {{ politico.partido.split('(')[-1].replace(')', '') }} </p>
+                            <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}">
                                 <button class="button">Ver Mais</button>
                             </a>
                         </div>

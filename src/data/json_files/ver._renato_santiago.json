@@ -1,0 +1,59 @@
+{
+    "nome": "Ver. Renato Santiago",
+    "nome_social": "RENATO CAMARGO SANTIAGO",
+    "data_nasc": "19/06/1977",
+    "ocupação": "Professor de Ensino Médio",
+    "partido": "PARTIDO UNIÃO BRASIL (UNIÃO BRASIL)",
+    "telefone": [
+        "(12) 3925-6697",
+        "(12) 3925-6623"
+    ],
+    "email": "renatosantiago@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE CULTURA E ESPORTES "
+        ],
+        [
+            "Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE ÉTICA "
+        ],
+        [
+            "Suplente de Membro",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE MEIO AMBIENTE "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "59",
+        "2023",
+        "78",
+        "2022",
+        "83",
+        "2021",
+        "82"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "0",
+        "2021",
+        "0",
+        "2024",
+        "3",
+        "2023",
+        "2",
+        "2022",
+        "1",
+        "2021",
+        "4"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido UNIÃO em 2024\nCandidato a Vereador/São José Dos Campos partido PSDB em 2020\nCandidato a Vereador/São José Dos Campos partido PSDB em 2016 Suplente",
+    "img": "../static/img/renato_santiago.jpg"
+}

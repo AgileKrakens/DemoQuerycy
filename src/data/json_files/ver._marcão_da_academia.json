@@ -1,0 +1,78 @@
+{
+    "nome": "Ver. Marcão da Academia",
+    "nome_social": "MARCO AURÉLIO SIMÃO RODRIGUES",
+    "data_nasc": "05/04/1979",
+    "ocupação": "Vereador",
+    "partido": "PARTIDO SOCIAL DEMOCRÁTICO (PSD)",
+    "telefone": [
+        "(12) 3925-6604",
+        "(12) 3925-6604"
+    ],
+    "email": "marcaodaacademia@camarasjc.sp.gov.br",
+    "comissoes": [
+        [
+            "Relator",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE PLANEJAMENTO URBANO, OBRAS E TRANSPORTES "
+        ],
+        [
+            "Suplente de Presidente",
+            "01/01/2023 a 31/12/2024",
+            "COMISSÃO DE MEIO AMBIENTE "
+        ]
+    ],
+    "presencas": [
+        "2024",
+        "62",
+        "2023",
+        "78",
+        "2022",
+        "79",
+        "2021",
+        "82",
+        "2020",
+        "89",
+        "2019",
+        "87",
+        "2018",
+        "79",
+        "2017",
+        "76"
+    ],
+    "ausencias": [
+        "2024",
+        "0",
+        "2023",
+        "0",
+        "2022",
+        "3",
+        "2021",
+        "0",
+        "2020",
+        "0",
+        "2019",
+        "0",
+        "2018",
+        "0",
+        "2017",
+        "0",
+        "2024",
+        "0",
+        "2023",
+        "2",
+        "2022",
+        "2",
+        "2021",
+        "4",
+        "2020",
+        "1",
+        "2019",
+        "2",
+        "2018",
+        "0",
+        "2017",
+        "1"
+    ],
+    "mandatos": "Candidato a Vereador/São José Dos Campos partido PSD em 2024\nCandidato a Vereador/São José Dos Campos partido DEM em 2020\nCandidato a Vereador/São José Dos Campos partido PTB em 2016\nCandidato a Vereador/São José Dos Campos partido PSB em 2012 Suplente\nCandidato a Vereador/São José Dos Campos partido PSB em 2008 Suplente\nCandidato a Vereador/São José Dos Campos partido PP em 2004 Suplente",
+    "img": "../static/img/marcao_academia.jpg"
+}
