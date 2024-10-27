@@ -52,23 +52,25 @@ python app.py
 
 # Product Backlog
 
-| Nº       | Requisitos Funcionais                                                                                           | Sprint | Prioridade |
-|----------|-----------------------------------------------------------------------------------------------------|--------|------------|
-| RF001.0  | O site precisa ter uma página com o perfil do vereador pesquisado.                                   | 1      | Alta       |
-| RF001.1  | No perfil do candidato, é preciso uma seção que mostra a presença do vereador nas sessões.           | 2      | Média      |
-| RF001.2  | No perfil do candidato, é preciso uma seção que mostra as proposições (Lei, Requerimento, Moção, Identificação) do vereador. | 2      | Média      |
-| RF001.3  | No perfil do candidato, é preciso uma seção que mostra as leis aprovadas de autoria do vereador, e os temas em que ele mais atuou. | 2      | Média      |
-| RF001.4  | No perfil do candidato, é preciso uma seção que mostra as comissões que o vereador participa, e os cargos dele em cada uma. | 2      | Baixa      |
-| RF001.5  | No perfil do candidato, é preciso uma seção que mostra os seguintes dados do candidato: idade, formação, área profissional, histórico de mandatos em São José dos Campos e partidos em que atuou. | 1      | Média      |
-| RF002.0  | O site deve ter uma página Home em que se pesquisa e é mostrado os candidatos e redireciona para a página do perfil. | 1      | Alta       |
-| RF002.1  | A página Home precisa ter uma barra de pesquisa que permite ao usuário buscar algum vereador por nome. | 1      | Alta       |
-| RF002.2  | A página Home precisa ter um mecanismo de filtragem que mostra os candidatos que pertencem ao partido selecionado. | 1      | Alta       |
-| RF002.3  | A página Home deve possuir um índice com a lista do nome de todos os vereadores.                     | 1      | Alta       |
-| RF003.0  | A página do perfil deve mostrar informações em relação ao tema das leis que o vereador mais aprovou.  | 3      | Alta       |
-| RF003.1  | Um gráfico de barra com os 7 temas mais aprovados pelo vereador, mais outros "restantes" que podem ser ampliados e visualizadas as porcentagens. | 3      | Média      |
-| RF003.2  | Uma janela de pesquisa por tema com listbox que mostra o output de quantos projetos aprovados o vereador tem naquele tema. | 3      | Alta       |
-| RF003.3  | Ambos os gráficos devem ser acompanhados por um terceiro que é a média de todos os vereadores.       | 3      | Baixa      |
-| RF004    | A página do perfil deve ter uma seção interativa que permite uma avaliação do candidato.             | 3      | Baixa      |
+# Product Backlog
+
+| Nº do Requisito | Requisitos | Sprint | Prioridade |
+| --- | --- | --- | --- |
+| RF001.0 | O site precisa ter uma página com o perfil do vereador pesquisado. | 1 | Alta |
+| RF002.0 | O site deve ter uma página Home de onde se redireciona aos perfis dos candidatos | 1 | Alta |
+| RF002.1 | A página home precisa ter uma barra de pesquisa que permite o usuário buscar algum vereador por nome | 1 | Alta |
+| RF002.2 | A página home precisa ter um botão de redirecionamento para a página “Políticos” | 1 | Alta |
+| RF002.3 | A página “Políticos” deve ter listados todos os cards com nome, foto e partido dos políticos e uma barra de pesquisa por nome e partido. | 2 | Alta |
+| RF001.1 | No perfil do candidato, é preciso uma seção que mostra a presença do vereador nas sessões | 2 | Média |
+| RF001.5 | No perfil do candidato, é preciso uma seção que mostra os seguintes dados do candidato: nome, partido, telefone, idade, formação, área profissional, histórico de mandatos em São José dos Campos e partidos em que atuou.  | 2 | Média |
+| RF001.4 | No perfil do candidato, é preciso uma seção que mostra as comissões que o vereador participa, e os cargos dele em cada uma | 2 | Baixo |
+| RF003.0 | A página do perfil deve mostrar informações em relação ao tema das leis que o vereador mais aprovou  | 3 | Alta |
+| RF003.2 | Uma janela de pesquisa por tema com list box que mostra com output de quantos projetos aprovados o vereador tem naquele tema | 3 | Alta |
+| RF003.1 | Um gráfico de barra com os 7 temas mais aprovados pelo vereador, mais outros “restantes” que podem ser ampliados e visualizados a porcentagem | 3 | Média |
+| RF001.2 | No perfil do candidato, é preciso uma seção de tabela em que se pesquisa e se mostra as proposições (Lei, Requerimento, Moção, Identificação) do vereador, excluindo leis | 3 | Média |
+| RF001.3 | No perfil do candidato, é preciso uma seção de tabela em que se pesquisa e se mostra as leis aprovadas de autoria do vereador | 3 | Média |
+| RF003.3 | Ambos os gráficos devem ser acompanhados por um terceiro que é a média de todos os vereadores  | 3 |  Baixa |
+| RF004 | A página do perfil deve ter uma seção interativa que permite uma avaliação do candidato | 3 | Baixa |
 
 # Time
 
