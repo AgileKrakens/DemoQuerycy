@@ -32,6 +32,9 @@ https://github.com/user-attachments/assets/09e7e4a4-59d7-4d1d-b844-55f1984ae509
 - Raspagem de dados pessoais de cada político
 - Persistência dos dados em arquivos JSON
 
+# Features - Sprint 2
+
+
 # Instalação e Utilização
 
 ```sh
@@ -52,7 +55,7 @@ python app.py
 
 # Product Backlog
 
-# Product Backlog
+## Requisitos Funcionais do projeto
 
 | Nº do Requisito | Requisitos | Sprint | Prioridade |
 | --- | --- | --- | --- |
@@ -60,7 +63,7 @@ python app.py
 | RF002.0 | O site deve ter uma página Home de onde se redireciona aos perfis dos candidatos | 1 | Alta |
 | RF002.1 | A página home precisa ter uma barra de pesquisa que permite o usuário buscar algum vereador por nome | 1 | Alta |
 | RF002.2 | A página home precisa ter um botão de redirecionamento para a página “Políticos” | 1 | Alta |
-| RF002.3 | A página “Políticos” deve ter listados todos os cards com nome, foto e partido dos políticos e uma barra de pesquisa por nome e partido. | 2 | Alta |
+| RF002.3 | A página “Políticos” deve ter listados todos os cards com nome, foto e partido dos políticos e uma barra de pesquisa por nome. | 2 | Alta |
 | RF001.1 | No perfil do candidato, é preciso uma seção que mostra a presença do vereador nas sessões | 2 | Média |
 | RF001.5 | No perfil do candidato, é preciso uma seção que mostra os seguintes dados do candidato: nome, partido, telefone, idade, formação, área profissional, histórico de mandatos em São José dos Campos e partidos em que atuou.  | 2 | Média |
 | RF001.4 | No perfil do candidato, é preciso uma seção que mostra as comissões que o vereador participa, e os cargos dele em cada uma | 2 | Baixo |
@@ -72,6 +75,18 @@ python app.py
 | RF003.3 | Ambos os gráficos devem ser acompanhados por um terceiro que é a média de todos os vereadores  | 3 |  Baixa |
 | RF004 | A página do perfil deve ter uma seção interativa que permite uma avaliação do candidato | 3 | Baixa |
 
+## User Stories
+| Requisito | Cartão | Sprint |
+| --- | --- | --- |
+| RF001.0 | Eu, como eleitor, gostaria de visualizar as informações pessoais e estatísticas de um vereador em uma página dedicada para seu perfil. | 1 |
+| RF002.0 | Eu, como eleitor, gostaria de ter uma página de recepção do site em que eu possa a partir dela acessar os perfis individuais. | 1 |
+| RF002.1 | Eu, como eleitor, gostaria de pesquisar o nome do vereador em uma barra de pesquisa, assim ter acesso ao perfil de vereadores com este nome. | 1 |
+| RF001.1 | Eu, como eleitor, gostaria de uma seção na página do perfil de cada político que mostra os dados da presença e faltas nas sessões do vereador. | 2 |
+| RF001.4 | Eu, como eleitor, gostaria de uma seção com informações sobre as comissões em que o vereador participa e as funções em que ele atuou na página de seu perfil. | 2 |
+| RF001.5 | Eu, como eleitor, gostaria de ver uma “seção” lateral com dados biográficos e histórico profissional do vereador na página do perfil. | 2 |
+| RF002.3 | Eu, como eleitor, gostaria de visualizar uma página “Políticos” que possui cards com foto, nome e partido de todos os políticos registrados, para que eu seja redirecionado para o perfil do político ao clicar no card. | 2 |
+| RF002.4 | Eu, como eleitor, gostaria de uma barra de pesquisa na página “Políticos” que filtra os cards correspondentes ao nome que eu pesquisei. | 2 |
+
 # Time
 
 | Foto | Nome | Função | Github | Linkedin |
@@ -79,11 +94,8 @@ python app.py
 | <img src="/assets/img_team/guiioshua.png" width=50px> | Guilherme Ioshua | Product Owner | <a href="https://github.com/guiioshua"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/guilherme-ioshua-sene/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | <img src="/assets/img_team/jodijotar.jpg" width=50px> | Fabio Fonseca | Scrum Master | <a href="https://github.com/jodijotar"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/fabiofonsecajodi/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | <img src="/assets/img_team/giovanni.jpg" width=50px> | Giovanni Kanjiscuk | Scrum Team | <a href="https://github.com/GKanjiscuk"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/giovanni-kanjiscuk/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-| <img src="/assets/img_team/kawata.png" width=50px> | Matheus Kawata | Scrum Team | <a href="https://github.com/KwMajor"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/matheus-felipe-0832b52ba/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
+| <img src="/assets/img_team/kawata.png" width=50px> | Matheus Felipe | Scrum Team | <a href="https://github.com/KwMajor"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/matheus-felipe-0832b52ba/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | <img src="/assets/img_team/g_marcos.png" width=50px> | Gabriel Marcos | Scrum Team | <a href="https://github.com/GabrieLMRDL"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href=""><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | <img src="/assets/img_team/konishi.png" width=50px> | Vinícius Konishi |  Scrum Team  | <a href="https://github.com/Vinicius-Konishi"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="https://www.linkedin.com/in/vin%C3%ADcius-greg%C3%B3rio-406640232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | <img src="/assets/img_team/g_fernando.png" width=50px> | Gabriel Fernando |  Scrum Team  | <a href="https://github.com/Gabriel-Fernando-Lima"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="www.linkedin.com/in/gabriel-fernando-bb430b330"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
 | <img src="/assets/img_team/g_farias.png" width=50px> | Gabriel Farias |  Scrum Team  | <a href="https://github.com/FariasTheProgrammer"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a> | <a href="www.linkedin.com/in/gabrielrodfarias"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> |
-
-
-
