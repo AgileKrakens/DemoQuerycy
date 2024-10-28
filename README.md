@@ -16,6 +16,23 @@ Utilizando scripts que coletam dados públicos referentes ao trabalho feito na c
 
 Dessa forma, considerando a complexidade dos documentos legais e a dificuldade de navegação no site oficial da câmara, nosso software busca trazer a devida transparência a essas informações e tornar a análise do desempenho do poder legislativo menos técnica, com o objetivo de ser acessível e conclusiva para qualquer público.
 
+# Features - Sprint 2
+## Páginas: Perfil e Políticos
+https://github.com/user-attachments/assets/b890285e-84ad-406f-a35d-badcc0d17ad9
+
+- Página Políticos:
+  * Geração automatizada dos Cards
+  * Barra de pesquisa: filtragem dos cards por nome do político correspondente
+- Página Perfil
+  * Inserção de novas informações biográficas e dados relevantes sobre a atuação do político na câmara
+  * Estilização da página
+## Data Scraping
+https://github.com/user-attachments/assets/feadcc8b-f0f8-4840-99d5-b324d3745e62
+
+- crawler_personal_data:
+  * Implementação de novos módulos: Área profissional, Comissões, Histórico de mandatos e Presença/Falta de cada político nas sessões
+  * Salvamento dos JSON com base no Endpoint da aplicação: exibição dos dados automatizada e sincronização com outros componentes
+
 # Features - Sprint 1
 ## Aplicação Web
 https://github.com/user-attachments/assets/29591d73-230e-4df1-af40-73fbc30b7fe2
@@ -32,9 +49,6 @@ https://github.com/user-attachments/assets/09e7e4a4-59d7-4d1d-b844-55f1984ae509
 - Raspagem de dados pessoais de cada político
 - Persistência dos dados em arquivos JSON
 
-# Features - Sprint 2
-
-
 # Instalação e Utilização
 
 ```sh
@@ -44,13 +58,7 @@ git clone https://github.com/AgileKrakens/DemoQuerycy.git
 cd /DemoQuerycy
 ```
 ```sh
-pip install -r requirements.txt
-```
-```sh
-cd /src
-```
-```sh
-python app.py
+docker-compose up
 ```
 
 ---
