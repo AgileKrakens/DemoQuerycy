@@ -53,6 +53,85 @@ cd /src
 python app.py
 ```
 
+---
+
+# MVP de Cada Sprint
+
+## Sprint 1
+
+### Páginas
+- **Páginas com HTML prototípico**
+  - Página Home
+  - Página de Perfis
+- **Wireframes**
+  - Features estáticas do site
+  - Features dinâmicas para dados individualizados dos políticos
+
+### Dados Biográficos
+- **Coleta de Dados**
+  - Início da automatização da coleta de dados biográficos (Webcrawler)
+  - Criação automatizada do perfil dos políticos cadastrados
+  - Inserção automática dos primeiros dados no perfil de maneira escalável (Flask)
+
+### Implementação da Aplicação
+- **Servidor Funcional**
+  - Página Home com carrossel e barra de pesquisa funcional
+  - Perfis de políticos com estruturação de informações biográficas básicas
+
+## Sprint 2
+
+### Página 'Políticos'
+- **Cards dos Políticos**
+  - Foto, nome e partido de todos os políticos registrados
+  - Redirecionamento para o perfil do político selecionado
+- **Sistema de Pesquisa**
+  - Pesquisa simples por nome do político
+
+### Término dos Dados Biográficos
+- **Coleta de Dados**
+  - Finalização da coleta de dados biográficos (Webcrawler)
+  - Display automatizado de todas as informações
+
+### Coleta e Implementação dos Dados dos Mandatos
+- **Informações sobre Presença**
+  - Seção com informações de presença nas sessões plenárias
+  - Comparação com a média da câmara
+- **Comissões**
+  - Listagem das comissões das quais o político participa
+- **Histórico de Mandatos**
+  - Histórico de mandatos e partidos anteriores
+
+## Sprint 3
+
+### Coleta e Armazenamento de Proposições
+- **Proposições dos Políticos**
+  - Coleta automatizada das proposições (crawler)
+  - Estruturação em tabelas (MySQL) com:
+    - Autor
+    - Data
+    - Tipo (ação, moção, indicação ou lei)
+    - Tema
+    - Status
+
+### Implementação das Informações nos Perfis
+- **Tabelas Interativas**
+  - Proposições não legislativas (ações, moções e indicações)
+  - Leis aprovadas pelo político
+
+### Gráficos de Temas de Lei
+- **Seções de Gráficos**
+  - Gráfico fixo com ~7 temas mais aprovados pelo vereador
+  - Gráfico interativo:
+    - Pesquisa e seleção de um tema
+    - Número absoluto de leis aprovadas nesse tema
+    - Composição relativa (porcentagem) do tema na atuação legislativa
+    - Comparação com a média do número absoluto e relativo em relação ao resto dos vereadores
+
+### Página Sobre
+- Criação da página "Sobre"
+
+---
+
 # Product Backlog
 
 ## Requisitos Funcionais do projeto
