@@ -11,14 +11,13 @@
         <!-- Sidebar com filtros -->
         <aside class="sidebar">
             <div class="filtros">
-                <h2>Buscar</h2>
+                <h2>Vereadores</h2>
                 <input type="text" class="filter-box" placeholder="Procurar...">
-                <h3>Vereadores:</h3>
             </div>
         </aside>
 
         <!-- Cards dos políticos -->
-        <section class="politicos">
+        <div class="politicos">
             <div class="resultados">
                 {% for politico in politicos %}
                     <div class="card">
@@ -41,6 +40,6 @@
                     </div>
                 {% endfor %}  
             </div>
-        </section>
+        </div>
     </section>
 {% endblock %}

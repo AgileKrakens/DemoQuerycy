@@ -10,33 +10,26 @@ body {
   max-width: 100%;
   padding: 20px 0;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.sidebar{
-  display: flex;
-  justify-content: center;
-  height: 20vh;
-  min-width: 100vw;
-  border-right: solid 1px #000;
-  text-align: justify;
-}
-
-section.politicos{
+.politicos{
   min-width: 100%;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  width: 100%;
-  box-sizing: border-box;
+  align-self: center;
+  
 }
 
 .resultados{
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: auto;
-  row-gap: 30px;
-  width: 95%; 
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  gap: 20px;
+  width: 100%; 
+  padding-left: 2.5%;
 }
 
 /* ===============CARD=============== */
@@ -78,8 +71,8 @@ section.politicos{
 .card-image{
   background-color: #FFF;
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: 170px;
+  width: 170px;
   padding: 3px;
   border-radius: 50%;
 }
@@ -138,16 +131,26 @@ section.politicos{
 /* ===============CARD-FIM=============== */
 
 /* ===============FILTROS===============*/
+.sidebar{
+  display: flex;
+  height: 20vh;
+  min-width: 100dvw;
+  text-align: justify;
+  align-items: center;
+  padding-left: 2.5%;
+}
+
 .filtros{
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: space-evenly;
+  width: 100%;
+  gap: 30px;
 }
 .filter-box{
   font-size: 20px;
   font-weight: 600;
-  width: 90dvw;
+  width: 400px;
   padding: 5px 40px 5px 10px;
   border: none;
   box-sizing: border-box;
@@ -157,3 +160,33 @@ section.politicos{
 }
 
 /* ===============FILTROS-FIM===============*/
+
+@media screen and (max-width:1100px){
+  .resultados{
+    padding-left: 5%;
+    width: 100%;
+  }
+  .filtros{
+    padding-left: 2.5%;
+  }
+  
+}
+@media screen and (max-width: 768px){
+  .sidebar, .filtros, .resultados{
+    padding: 0;
+  }
+  .filter-box{
+    width: 70vw;
+  }
+  .sidebar{
+    justify-content: center;
+  }
+  .filtros{
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+  }
+  .resultados{
+    justify-content: center;
+  }
+}
