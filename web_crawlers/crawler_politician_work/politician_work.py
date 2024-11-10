@@ -1,28 +1,29 @@
+import os
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
 from selenium.common.exceptions import NoSuchElementException
+import time
 
-tipos_de_proposta = [
-    '//*[@id="tab_leis_autoria"]/div/div[1]/div[1]/div/a', 
-    '//*[@id="tab_leis_autoria"]/div/div[2]/div[1]/div/a', 
-    '//*[@id="tab_leis_autoria"]/div/div[3]/div[1]/div/a',
-    '//*[@id="tab_leis_autoria"]/div/div[4]/div[1]/div/a', 
-    '//*[@id="tab_leis_autoria"]/div/div[5]/div[1]/div/a'
-] 
 
-def get_LA(url2):
-    url = url2
+base_dir = os.path.dirname(__file__)  
+urls_file = os.path.join(base_dir, "..", "crawler_personal_data", "camara_endpoints.txt")
+
+
+def read_urls(urls_file):
+    with open(urls_file, 'r') as f:
+        urls = f.read().splitlines()
+    return urls
+
+def get_LA(url):
     service = Service()
 
-    options = webdriver.ChromeOptions()
-    # options.add_argument("--headless=new")  # Descomente para rodar em modo headless
+
+    options = webdriver.FirefoxOptions()
+    options.add_argument("--headless")  
     options.add_argument("--no-sandbox")
 
-    driver = webdriver.Chrome(service=service, options=options)
+    driver = webdriver.Firefox(service=service, options=options)
     driver.get(url)
     time.sleep(2)
 
@@ -31,14 +32,14 @@ def get_LA(url2):
     time.sleep(2)
     
     limite = 0
-    for xpath in range(1, 6):  # Altere para 6 para cobrir todos os elementos
+    for xpath in range(1, 6): 
         try:
             driver.find_element(By.XPATH, f'//*[@id="tab_leis_autoria"]/div/div[{xpath}]/div[1]/div/a')
             limite += 1
         except NoSuchElementException:
             continue
 
-    dicionario = {}  # Declara o dicionário antes do loop para coletar dados de todas as páginas
+    dicionario = {} 
     colunas = ['Tipo', 'Numero', 'Ano', 'Data', 'Origem',  'Autor', 'Resumo', 'Situacao', 'Temas']
     
     for i in range(1, limite + 1):
@@ -60,18 +61,18 @@ def get_LA(url2):
 
                 if x == 6:
                     info = driver.find_element(By.XPATH, '//*[@id="filtros"]/span[2]/strong')
-                    dado["Autor"] = info.text  # Nomeie a coluna com a chave correta
+                    dado["Autor"] = info.text
                 else:
                     info = driver.find_element(By.XPATH, f'//*[@id="relatorio"]/tr[{k}]/td[{x}]')
 
-                # Construindo o código (usando colunas 2 e 3) e armazenando os dados
+                
                 if x == 2:
                     codigo = info.text
                     dado["Numero"] = info.text
                 elif x == 3:
                     codigo = f"{codigo}/{info.text}"
                     dado["Ano"] = info.text
-                elif x <= 9:  # Limita o índice ao tamanho da lista 'colunas'
+                elif x <= 9: 
                     dado[colunas[x - 1]] = info.text
 
             if codigo:
@@ -85,4 +86,17 @@ def get_LA(url2):
     driver.quit()
     return dicionario
 
-print(get_LA('https://camarasempapel.camarasjc.sp.gov.br/spl/parlamentar.aspx?id=43'))
+def process_all_urls(urls_file):
+    urls = read_urls(urls_file)
+    results = []
+    for url in urls:
+        try:
+            result = get_LA(url)
+            results.append(result)
+        except Exception as e:
+            print(f"Failed to process URL {url}: {e}")
+    return results
+
+
+dados_coletados = process_all_urls(urls_file)
+print(dados_coletados)
