@@ -2,8 +2,8 @@
 {% block title %}{{ perfil.nome }}{% endblock %}
 
 {% block additional_styles %}
-<link rel="stylesheet" href="../static/css/perfil.css">
 <link rel="stylesheet" href="../static/css/reset-perfil.css">
+<link rel="stylesheet" href="../static/css/perfil.css">
 <title> {{ perfil.nome }} </title>
 {% endblock %}
 
@@ -11,20 +11,18 @@
 <div class="container">
     <div class="sidebar">
         <img src=" {{ perfil.img }}" alt="Foto do Político" class="foto">
-        <div class="card">
-            <div class="card-head">
+        <div class="card info">
                 <h2>Informações pessoais</h2>
                 <div class="card-body">
-                    <p>Nome: {{ perfil.nome }}</p>
-                    <p>Nome Social: {{ perfil.nome_social }}</p>
-                    <p>{{ perfil.partido }}</p>
-                    <p>Data de nascimento: {{ perfil.data_nasc }}</p>
-                    <p>Telefone: {{ perfil.telefone[0] }}</p>
-                    <p>Área profissional: {{ perfil.ocupação }} </p>
+                    <p>Nome: <span>{{ perfil.nome }}</span></p>
+                    <p>Nome Social:<span> {{ perfil.nome_social }}</span></p>
+                    <p>Partido: <span>{{ perfil.partido }}</span></p>
+                    <p>Data de nascimento: <span>{{ perfil.data_nasc }}</span></p>
+                    <p>Telefone: <span>{{ perfil.telefone[0] }}</span></p>
+                    <p>Área profissional: <span>{{ perfil.ocupação }}</span> </p>
                 </div>
-            </div>
         </div>
-        <div class="card">
+        <div class="card meetings">
             <div class="card-body">
                 <div class="comissoes">
                     <h2>Comissões</h2>
@@ -38,6 +36,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="content">
@@ -157,13 +156,22 @@
             </div>
         </div>
         <div class="info-pessoal">
-            <h2 id="">Histórico de mandatos</h2>
-            <ul id="alinhar">
+            <h2>Histórico de mandatos</h2>
+            <ul class="lista-mandatos">
                 {% for k in perfil.mandatos.split('\n') %}
                     <li> {{ k }} <br></li>
                 {% endfor %}
             </ul>
         </div>
+
     </div>
+
+    
+</div>
+
+<div class="container-graficos">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="graficos"></div>
 </div>
 {% endblock %}
