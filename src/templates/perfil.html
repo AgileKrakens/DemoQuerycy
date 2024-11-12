@@ -12,15 +12,15 @@
     <div class="sidebar">
         <img src=" {{ perfil.img }}" alt="Foto do Político" class="foto">
         <div class="card info">
-                <h2>Informações pessoais</h2>
-                <div class="card-body">
-                    <p>Nome: <span>{{ perfil.nome }}</span></p>
-                    <p>Nome Social:<span> {{ perfil.nome_social }}</span></p>
-                    <p>Partido: <span>{{ perfil.partido }}</span></p>
-                    <p>Data de nascimento: <span>{{ perfil.data_nasc }}</span></p>
-                    <p>Telefone: <span>{{ perfil.telefone[0] }}</span></p>
-                    <p>Área profissional: <span>{{ perfil.ocupação }}</span> </p>
-                </div>
+            <h2>Informações pessoais</h2>
+            <div class="card-body">
+                <p>Nome: <span>{{ perfil.nome }}</span></p>
+                <p>Nome Social:<span> {{ perfil.nome_social }}</span></p>
+                <p>Partido: <span>{{ perfil.partido }}</span></p>
+                <p>Data de nascimento: <span>{{ perfil.data_nasc }}</span></p>
+                <p>Telefone: <span>{{ perfil.telefone[0] }}</span></p>
+                <p>Área profissional: <span>{{ perfil.ocupação }}</span> </p>
+            </div>
         </div>
         <div class="card meetings">
             <div class="card-body">
@@ -28,9 +28,9 @@
                     <h2>Comissões</h2>
                     <ul>
                         {% for k in perfil.comissoes %}
-                            <li> 
-                                {{ k[0] + ' - ' + k[1] }} <br> {{ k[2]}} 
-                            </li>
+                        <li>
+                            {{ k[0] + ' - ' + k[1] }} <br> {{ k[2]}}
+                        </li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -159,18 +159,37 @@
             <h2>Histórico de mandatos</h2>
             <ul class="lista-mandatos">
                 {% for k in perfil.mandatos.split('\n') %}
-                    <li> {{ k }} <br></li>
+                <li> {{ k }} <br></li>
                 {% endfor %}
             </ul>
         </div>
-
     </div>
-
-    
 </div>
 
 <div class="container-graficos">
-    <div class="card"></div>
+    <div class="card">
+        <div class="filtro-pesquisa">
+            <label for="barra-tema">Pesquisa por tema</label>
+            <div class="barra-pesquisa">
+                <input type="text" id="barra-tema" placeholder="Tema" />
+                <button class="botao-dropdown">▼</button>
+            </div>
+            <div class="temas-selecionados">
+                <div>
+                    <input type="checkbox" id="tema-x" name="tema-x" checked />
+                    <label for="tema-x">Tema X selecionado</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tema-y" name="tema-y" checked />
+                    <label for="tema-y">Tema Y selecionado</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tema-z" name="tema-z" checked />
+                    <label for="tema-z">Tema Z selecionado</label>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="card"></div>
     <div class="graficos"></div>
 </div>
