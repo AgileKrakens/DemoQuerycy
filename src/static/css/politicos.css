@@ -5,43 +5,102 @@ body {
   overflow-x: hidden;
 }
 
-.flex-container{
+.flex-container {
   display: flex;
   max-width: 100%;
-  padding: 20px 0;
+  padding: 0 2% 5% 2%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.politicos{
+.politicos {
   min-width: 100%;
-  box-sizing: border-box;
+  align-self: center;
   display: flex;
   justify-content: center;
-  align-self: center;
-  
+  align-items: center;
 }
 
-.resultados{
-  display: flex;
-  flex-wrap: wrap;
-  align-self: center;
-  gap: 20px;
-  width: 100%; 
-  padding-left: 2.5%;
+.resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  width: 100%;
 }
+
+/* Adiciona o estilo para quando os cards forem filtrados */
+.filtered {
+  display: flex;
+  justify-content: flex-start; /* Alinha os cards à esquerda */
+  flex-wrap: wrap; /* Permite que os cards quebrem linha */
+  gap: 10px; /* Reduz o espaçamento entre os cards */
+  padding-left: 0; /* Remove padding desnecessário */
+  padding-right: 0;
+}
+
+.filtered .card { /* Define a margem entre os cards */
+  flex-basis: calc(25% - 10px); /* Define a largura dos cards como 25% da linha */
+  max-width: 250px; /* Define a largura máxima para os cards */
+}
+
+@media screen and (max-width: 1100px) {
+  .filtered .card {
+    flex-basis: calc(33.33% - 10px); /* Ajuste para telas menores */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filtered .card {
+    flex-basis: calc(50% - 10px); /* Ajuste para telas pequenas */
+  }
+}
+
+/* ===============FILTROS=============== */
+.sidebar {
+  display: flex;
+  height: 20vh;
+  min-width: 100%;
+  text-align: justify;
+  align-items: center;
+}
+
+.filtros {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  gap: 30px;
+}
+
+.filter-box {
+  font-size: 20px;
+  font-weight: 600;
+  width: 400px;
+  padding: 5px 40px 5px 10px;
+  border: none;
+  box-sizing: border-box;
+  height: 25px;
+  border-radius: 50px;
+}
+
+.no-results {
+  display: none;
+}
+
+/* ===============FILTROS-FIM=============== */
 
 /* ===============CARD=============== */
-.card{
-  background-color: #FFF ;
+.card {
+  background-color: #FFF;
   border-radius: 25px;
   width: 17rem;
   height: 23rem;
   border: solid 1px #000;
   box-shadow: #000;
 }
-.overlay{
+
+.overlay {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -50,25 +109,29 @@ body {
   left: 0;
   top: 0;
 }
-.overlay::before, .overlay::after{
+
+.overlay::before,
+.overlay::after {
   content: '';
   position: absolute;
   right: 0;
   bottom: -40px;
   height: 40px;
   width: 40px;
-  
 }
-.overlay::before{
+
+.overlay::before {
   width: 39px;
   height: 41px;
   background-color: #000;
 }
-.overlay::after{
+
+.overlay::after {
   border-radius: 0 25px 0 0;
   background-color: #FFF;
 }
-.card-image{
+
+.card-image {
   background-color: #FFF;
   position: relative;
   height: 170px;
@@ -77,27 +140,28 @@ body {
   border-radius: 50%;
 }
 
-.card-image .card-img{
+.card-image .card-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.image-content, .card-content{
+.image-content,
+.card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 12px 15px;
 }
-.image-content{
+
+.image-content {
   padding: 25px 0;
   row-gap: 5px;
   position: relative;
-  
 }
 
-.name{
+.name {
   font-size: 18px;
   font-weight: 500;
   color: #323334;
@@ -106,14 +170,14 @@ body {
   text-wrap: wrap;
 }
 
-.descricao{
+.descricao {
   font-size: 13px;
   color: #707070;
   text-align: center;
   padding-top: 10px;
 }
 
-.button{
+.button {
   border: none;
   font-size: 16px;
   color: white;
@@ -125,72 +189,48 @@ body {
   transition: all 0.3 ease;
 }
 
-.button:hover{
+.button:hover {
   background: #575757;
 }
 /* ===============CARD-FIM=============== */
 
-/* ===============FILTROS===============*/
-.sidebar{
-  display: flex;
-  height: 20vh;
-  min-width: 100dvw;
-  text-align: justify;
-  align-items: center;
-  padding-left: 2.5%;
-}
-
-.filtros{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 100%;
-  gap: 30px;
-}
-.filter-box{
-  font-size: 20px;
-  font-weight: 600;
-  width: 400px;
-  padding: 5px 40px 5px 10px;
-  border: none;
-  box-sizing: border-box;
-  height: 25px;
-  border-radius: 50px;
-  
-}
-
-.no-results{
-  display: none;
-}
-
-/* ===============FILTROS-FIM===============*/
-
-@media screen and (max-width:1100px){
-  .resultados{
+/* Media Queries para ajustes responsivos */
+@media screen and (max-width: 1100px) {
+  .resultados {
     padding-left: 5%;
     width: 100%;
   }
-  .filtros{
+
+  .filtros {
     padding-left: 2.5%;
   }
-  
 }
-@media screen and (max-width: 768px){
-  .sidebar, .filtros, .resultados{
+
+@media screen and (max-width: 768px) {
+  .sidebar,
+  .filtros,
+  .resultados {
     padding: 0;
   }
-  .filter-box{
+
+  .filter-box {
     width: 70vw;
   }
-  .sidebar{
+
+  .sidebar {
     justify-content: center;
   }
-  .filtros{
+
+  .filtros {
     justify-content: center;
     align-items: center;
     width: 70vw;
   }
-  .resultados{
+
+  .resultados {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
