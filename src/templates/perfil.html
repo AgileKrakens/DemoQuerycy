@@ -2,8 +2,8 @@
 {% block title %}{{ perfil.nome }}{% endblock %}
 
 {% block additional_styles %}
-<link rel="stylesheet" href="../static/css/reset-perfil.css">
-<link rel="stylesheet" href="../static/css/perfil.css">
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/reset-perfil.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename = 'css/perfil.css')}}">
 <title> {{ perfil.nome }} </title>
 {% endblock %}
 

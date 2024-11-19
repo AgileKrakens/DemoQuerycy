@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %} - DemoQuerycy</title>
+    <title>{% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header-style.css') }}">
-    
+
 
     <!-- Para referenciar arquivos estáticos (como arquivos CSS), a maneira correta no Flask é usar {{ url_for('static', filename='path/to/file') }} -->
     {% block additional_styles %}
     {% endblock %}
-    
-    <script type="module" src="{{ url_for('static', filename='javascript/autocomplete.js') }}"></script>
-    
+
 </head>
 
 <body>
     <header>
         <span class="logo">Demoquerycy</span>
-        <div class="hamburguer">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
         <nav class="nav-bar">
             <ul>
                 <li>
@@ -34,10 +28,7 @@
                 <li>
                     <a class="nav-buttons" href="/pagina-politicos">Políticos</a>
                 </li>
-                <li>
-                    <a class="nav-buttons" href="/">Sobre</a>
-                </li>
-            </ul>  
+            </ul>
         </nav>
     </header>
     <main>
