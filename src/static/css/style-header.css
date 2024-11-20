@@ -1,0 +1,24 @@
+/* Definição de fonte do header e reset de estilos */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+header{
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+ul{
+    list-style: none;
+}
+
+
+/* Estilização da logo: aumento e espaçamento entre as letras */
+.navbar-brand {
+    font-size: 1.7rem;
+    letter-spacing: 0.21em;
+    margin-left: 3rem;
+    font-weight:500 ;
+}
+ /* Estilização dos itens da navbar */
+.nav-link{
+    color: white;
+    margin: 0 0.5rem
+}
+  
