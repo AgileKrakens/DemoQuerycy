@@ -19,7 +19,7 @@ def get_LA(url):
     service = Service()
 
     options = webdriver.ChromeOptions()
-    # options.add_argument("--headless=new")  # Descomente para rodar em modo headless
+    options.add_argument("--headless=new")  # Descomente para rodar em modo headless
     options.add_argument("--no-sandbox")
 
     driver = webdriver.Chrome(service=service, options=options)
