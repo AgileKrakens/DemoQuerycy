@@ -25,6 +25,8 @@ def save_to_mysql(records):
         password='qwerty',
         database='db',
         port=3306,
+        charset='uf8mb4',
+        use_unicode=True,
         ssl_disabled=True
     )
     cursor = connection.cursor()

@@ -11,22 +11,29 @@ services:
       - DATABASE_PORT=3306
       - DATABASE_USER=admin
       - DATABASE_PASSWORD=qwerty
-      - DATABASE_NAME=database
+      - DATABASE_NAME=db
     depends_on:
       - db
+    networks:
+      - web-network
 
   db:
     image: mysql:8.0
     ports:
       - "3306:3306"
+    networks:
+      - web-network
     environment:
       MYSQL_ROOT_PASSWORD: qwerty
-      MYSQL_DATABASE: database
+      MYSQL_DATABASE: db
       MYSQL_USER: admin
       MYSQL_PASSWORD: qwerty
     volumes:
       - db_data:/var/lib/mysql
-
+      - ./init-scripts:/docker-entrypoint-initdb.d
+      
+networks:
+  web-network:
 volumes:
   db_data:
 
