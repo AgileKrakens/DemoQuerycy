@@ -1,0 +1,71 @@
+/* Ajuste do tamanho geral do Card */
+.custom-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    max-width: 300px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o card */
+  }
+  
+  /* Header do Card (Imagem + Overlay) */
+  .custom-card-header {
+    position: relative;
+    background-color: #000;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .custom-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    z-index: 1;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  /* Ajuste da Imagem */
+  .custom-card-img-wrapper {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .custom-card-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    margin-bottom: 2rem;
+  }
+  
+  /* Corpo do Card */
+  .card-body {
+    padding-top: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+  }
+  
+  /* Botão */
+  .btn {
+    width: 70%; /* Botão maior */
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.02);
+  }
