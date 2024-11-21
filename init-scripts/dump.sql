@@ -9,3 +9,6 @@ CREATE TABLE IF NOT EXISTS public_records (
 	arquivo TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
 	autor VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 );
+SET character_set_client = utf8mb4;
+SET character_set_connection = utf8mb4;
+SET character_set_results = utf8mb4;
