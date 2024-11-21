@@ -15,7 +15,7 @@ class PublicRecord:
         self.autor = autor
 
     @staticmethod
-    def parse_date(data):
+    def parse_date(data): #tratamento para sintaxe da tipagem DATETIME em sql
         return datetime.strptime(data, "%d/%m/%Y %H:%M:%S") if data else None
 
 def save_to_mysql(records):
@@ -101,4 +101,3 @@ def main():
     return 'sucess insert'
 
 main()
-
