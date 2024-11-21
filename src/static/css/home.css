@@ -1,0 +1,24 @@
+.carousel {
+    position: relative; /* Ensure the carousel is positioned relatively */
+}
+
+.custom-control {
+    width: 10%; /* Increase width */
+    height: 10%; /* Increase height */
+    padding: 10px; /* Increase clickable area */
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position buttons absolutely */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for the height of the button */
+}
+
+.carousel-control-prev {
+    left: -10px; /* Adjust left position */
+}
+
+.carousel-control-next {
+    right: -20; /* Adjust right position */
+}

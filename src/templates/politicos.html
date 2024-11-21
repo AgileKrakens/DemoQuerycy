@@ -32,7 +32,7 @@ Políticos
                 <!-- Conteúdo do Card -->
                 <div class="card-body">
                     <h5 class="card-title">{{ politico.nome }}</h5>
-                    <p class="card-text text-muted">Partido: {{ politico.partido.split('(')[-1].replace(')', '') }}</p>
+                    <p class="card-text text-muted partido">Partido: {{ politico.partido.split('(')[-1].replace(')', '') }}</p>
                     <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver Mais</a>
                 </div>
             </div>

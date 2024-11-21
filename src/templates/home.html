@@ -6,22 +6,28 @@ Home
 
 {% block additional_styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
 {% endblock %}
 
 {% block content %}
-<div class="container my-5">
-    <h1 class="text-center mb-4">Políticos</h1>
-    <!-- Carrossel -->
+<div class="container bg-dark shadow py-2 my-3 rounded">
+    <h5 class="container text-center fonte-header text-light">
+        Clique em <span class="text-decoration-underline">Ver Mais</span> para conhecer mais do último mandato dos vereadores de São José dos Campos
+    </h5>
+</div> 
+
+<div class="container layered-section rounded shadow-lg">
+      <!-- Carrossel -->
     <div id="politiciansCarousel" class="carousel slide" data-bs-ride="carousel">
 
         <!-- Carousel Content -->
         <div class="carousel-inner">
-            {% for group in politicos|batch(3, '') %}
+            {% for group in politicos|batch(4, '') %}
             <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
                 <div class="row justify-content-center g-3">
                     {% for politico in group %}
                     {% if politico != '' %}
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3"> <!-- Mude de col-md-4 para col-md-3 para 4 cards -->
                         <!-- Card -->
                         <div class="card custom-card text-center shadow-sm">
                             <!-- Imagem e Overlay -->
@@ -35,10 +41,8 @@ Home
                             <!-- Conteúdo do Card -->
                             <div class="card-body">
                                 <h5 class="card-title">{{ politico.nome }}</h5>
-                                <p class="card-text text-muted">Partido: {{ politico.partido.split('(')[-1].replace(')',
-                                    '') }}</p>
-                                <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver
-                                    Mais</a>
+                                <p class="card-text text-muted card-party">Partido: {{ politico.partido.split('(')[-1].replace(')', '') }}</p>
+                                <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver Mais</a>
                             </div>
                         </div>
                         <!-- End Card -->
@@ -51,15 +55,14 @@ Home
         </div>
 
         <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#politiciansCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev custom-control" type="button" data-bs-target="#politiciansCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#politiciansCarousel" data-bs-slide="next">
+        <button class="carousel-control-next custom-control" type="button" data-bs-target="#politiciansCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
 
     {% endblock %}
