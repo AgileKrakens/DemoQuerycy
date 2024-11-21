@@ -5,46 +5,40 @@ Políticos
 {% endblock %}
 
 {% block additional_styles %}
-    <link rel="stylesheet" href="../static/css/politicos.css">
-    <script type="module" src="../static/javascript/politicos.js" defer></script>
-    <script src="../static/javascript/search.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/politicos.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css')}}">
 {% endblock %}
 
 {% block content %}
-    <section class="flex-container">
-        <!-- Sidebar com filtros -->
-        <aside class="sidebar">
-            <div class="filtros">
-                <h2>Vereadores</h2>
-                <input type="text" class="filter-box" placeholder="Procurar...">
-            </div>
-        </aside>
 
-        <!-- Cards dos políticos -->
-            <div class="resultados">
-                {% for politico in politicos %}
-                    <div class="card">
-                        <!-- Conteúdo da imagem do card -->
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="{{ politico.img }}" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        
-                        <!-- Conteúdo textual do card -->
-                        <div class="card-content">
-                            <h2 class="name">{{ politico.nome }}</h2>
-                            <p class="descricao">Partido: {{ politico.partido.split('(')[-1].replace(')', '') }} </p>
-                            <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}">
-                                <button class="button">Ver Mais</button>
-                            </a>
-                        </div>
+<!--Barra de pesquisa-->
+<div class="text-center my-5">
+<h1>Placeholder</h1>
+</div>
+
+<!-- Cards -->
+<div class="container my-4 cards-section shadow-lg layered-section">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5">
+        {% for politico in politicos %}
+        <div class="col">
+            <div class="card custom-card text-center shadow-lg">
+                <!-- Imagem e Overlay -->
+                <div class="position-relative custom-card-header">
+                    <div class="custom-card-overlay"></div>
+                    <div class="custom-card-img-wrapper">
+                        <img src="{{ politico.img }}" alt="Foto Vereador" class="rounded-circle custom-card-img">
                     </div>
-                {% endfor %}   
-                <div class="no-results">
-                    <p>Nenhum vereador encontrado.</p>
-                </div> 
+                </div>
+                <!-- Conteúdo do Card -->
+                <div class="card-body">
+                    <h5 class="card-title">{{ politico.nome }}</h5>
+                    <p class="card-text text-muted">Partido: {{ politico.partido.split('(')[-1].replace(')', '') }}</p>
+                    <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver Mais</a>
+                </div>
             </div>
-    </section>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 {% endblock %}
