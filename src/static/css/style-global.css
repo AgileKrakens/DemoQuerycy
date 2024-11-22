@@ -5,8 +5,8 @@ body{
     font-family: 'Poppings', sans-serif;
 }
 
-.layered-section{
-    background-color: #d1d1d1bd;
+.card{
+    background-color: #ffffffd9
 }
 
 /* Classe para definição rápida de fonte igual ao Header */
