@@ -1,4 +1,17 @@
-.cards-section{
-    border-radius:1rem;
-    padding: 5rem;
+.cards-section {
+    border-radius: 1rem;
+    padding: 4rem;
+}
+
+#noPoliticiansMessage {
+    background-color: #ffffffd8;
+    color: #5a5a5a;
+    text-align: center; /* Centraliza */
+    padding: 1rem; /* Add some padding */ 
+    margin-top: 3rem;
+}
+
+
+h5{
+    margin-bottom: 0;
 }

@@ -5,39 +5,55 @@ Políticos
 {% endblock %}
 
 {% block additional_styles %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/politicos.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/politicos.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/background.css')}}">
+{% endblock %}
+
+{% block additional_scripts %}
+<script src="{{url_for('static', filename='javascript/search.js')}}"></script>
 {% endblock %}
 
 {% block content %}
 
-<!--Barra de pesquisa-->
-<div class="text-center my-5">
-<h1>Placeholder</h1>
+<!-- Search Bar -->
+<div class="text-center my-5 container fonte-header">
+    <h1>Políticos</h1>
+    <input type="text" id="searchBar" class="form-control my-3" placeholder="Digite o nome do político"
+        onkeyup="filterCards()">
 </div>
 
 <!-- Cards -->
-<div class="container my-4 cards-section shadow-lg layered-section">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5">
-        {% for politico in politicos %}
-        <div class="col">
-            <div class="card custom-card text-center shadow-lg">
-                <!-- Imagem e Overlay -->
-                <div class="position-relative custom-card-header">
-                    <div class="custom-card-overlay"></div>
-                    <div class="custom-card-img-wrapper">
-                        <img src="{{ politico.img }}" alt="Foto Vereador" class="rounded-circle custom-card-img">
+<div class="background-section-center min-vh-100 align-items-center">
+
+    <div class="container cards-section shadow-lg layered-section">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5" id="politicianCards">
+            {% for politico in politicos %}
+            <div class="col politician-card">
+                <div class="card custom-card text-center shadow-lg">
+                    <!-- Imagem e fundo -->
+                    <div class="position-relative custom-card-header">
+                        <div class="custom-card-overlay"></div>
+                        <div class="custom-card-img-wrapper">
+                            <img src="{{ politico.img }}" alt="Foto Vereador" class="rounded-circle custom-card-img">
+                        </div>
+                    </div>
+                    <!-- Conteúdo do card, nome, partido e botão -->
+                    <div class="card-body">
+                        <h5 class="card-title">{{ politico.nome }}</h5>
+                        <p class="card-text text-muted partido">Partido: {{ politico.partido.split('(')[-1].replace(')',
+                            '') }}</p>
+                        <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver
+                            Mais</a>
                     </div>
                 </div>
-                <!-- Conteúdo do Card -->
-                <div class="card-body">
-                    <h5 class="card-title">{{ politico.nome }}</h5>
-                    <p class="card-text text-muted partido">Partido: {{ politico.partido.split('(')[-1].replace(')', '') }}</p>
-                    <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver Mais</a>
-                </div>
             </div>
+            <!-- No Politicians Found Message -->
+            <div id="noPoliticiansMessage" class="container justify-content-center rounded" style="display: none">
+                <h5 class="fonte-header">Nenhum político encontrado</h5>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </div>
 
