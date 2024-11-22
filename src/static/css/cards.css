@@ -1,69 +1,48 @@
-/* Ajuste do tamanho geral do Card */
+/* ------------------------ CARDS ------------------------ */
 .custom-card {
   border-radius: 15px;
   overflow: hidden;
   background-color: #fff;
-  max-width: 250px; /* Diminui a largura máxima do card */
-  margin: 0 auto; /* Centraliza o card */
+  max-width: 240px; /* Largura do card */
+  margin: 0 auto;
 }
 
-/* Header do Card (Imagem + Overlay) */
 .custom-card-header {
   position: relative;
-  background-color: #2c2c2c;
-  height: 200px; /* Mantenha a altura desejada */
+  height: 175px; /* Altura do card */
   border-radius: 15px 15px 0 0;
-  border: 3px solid white;
-  display: flex; /* Adiciona flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c2c2c; /* Cor de fundo da imagem */
 }
 
-/* Ajuste da Imagem */
 .custom-card-img-wrapper {
-  position: relative; /* Muda para relative para flexbox funcionar */
+  position: relative;
   z-index: 2;
 }
 
 .custom-card-img {
-  width: 150px; /* Ajuste conforme necessário */
-  height: 150px; /* Ajuste conforme necessário */
-  object-fit: cover; /* Mantém a proporção da imagem */
-  border: 2px solid #fff;
-  margin-bottom: 0; /* Remove a margem inferior */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #fff;
 }
 
-/* Corpo do Card */
-.card-body {
-  padding-top: 1rem; /* Ajusta o padding superior */
+.card-title,
+.card-party {
+  /* Estilização para evitar vazamento de texto */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Previne que o nome atrapalhe a estilização */
-.card-title, .card-party {
-  white-space: nowrap; /* Prevents text from wrapping */
-  overflow: hidden; /* Hides overflow text */
-  text-overflow: ellipsis; /* Adds ellipsis (...) for overflow text */
-}
-
-/* Botão */
 .btn {
-  width: 100%; /* Botão maior */
-  font-size: 1rem;
+  width: 100%;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
 
 .btn:hover {
   transform: scale(1.02);
-}
-
-/* Ajuste da área do carrossel */
-.carousel-inner {
-  padding: 20px; /* Adiciona padding ao carrossel */
-}
-
-@media (max-width: 768px) {
-  .card {
-      height: auto; /* Allow cards to adjust height on smaller screens */
-  }
 }
