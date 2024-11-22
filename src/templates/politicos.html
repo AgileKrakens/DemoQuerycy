@@ -18,15 +18,15 @@ Políticos
 
 <!-- Search Bar -->
 <div class="text-center my-5 container fonte-header">
-    <h1>Políticos</h1>
-    <input type="text" id="searchBar" class="form-control my-3" placeholder="Digite o nome do político"
+    <h2>Procure pelo político que você deseja visualizar</h2>
+    <input type="text" id="searchBar" class="form-control my-3" placeholder="Nome do político"
         onkeyup="filterCards()">
 </div>
 
 <!-- Cards -->
 <div class="background-section-center min-vh-100 align-items-center">
 
-    <div class="container cards-section shadow-lg layered-section">
+    <div class="container cards-section shadow-lg card">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5" id="politicianCards">
             {% for politico in politicos %}
             <div class="col politician-card">
@@ -48,8 +48,8 @@ Políticos
                     </div>
                 </div>
             </div>
-            <!-- No Politicians Found Message -->
-            <div id="noPoliticiansMessage" class="container justify-content-center rounded" style="display: none">
+            <!-- Mensagem  -->
+            <div id="noPoliticiansMessage" class="container justify-content-center card" style="display: none">
                 <h5 class="fonte-header">Nenhum político encontrado</h5>
             </div>
             {% endfor %}
