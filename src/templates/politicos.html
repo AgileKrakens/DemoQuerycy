@@ -11,7 +11,7 @@ Políticos
 {% endblock %}
 
 {% block additional_scripts %}
-<script src="{{url_for('static', filename='javascript/search.js')}}"></script>
+<script src="{{url_for('static', filename='javascript/card-search.js')}}"></script>
 {% endblock %}
 
 {% block content %}
@@ -40,7 +40,7 @@ Políticos
                     </div>
                     <!-- Conteúdo do card, nome, partido e botão -->
                     <div class="card-body">
-                        <h5 class="card-title">{{ politico.nome }}</h5>
+                        <h5 class="card-title">{{ politico.nome[5:] }}</h5>
                         <p class="card-text text-muted partido">Partido: {{ politico.partido.split('(')[-1].replace(')',
                             '') }}</p>
                         <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver
