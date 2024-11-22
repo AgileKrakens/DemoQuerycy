@@ -1,0 +1,13 @@
+.background-section-center{
+    background-image: url('../img/Brasão_de_São_José_dos_Campos.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 30%;
+    background-size: 50%;
+}
+
+.background-section-top{
+    background-image: url('../img/Brasão_de_São_José_dos_Campos.svg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,192 +1,85 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../static/css/reset.css">
-    <link rel="stylesheet" href="../static/css/header-style.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-</head>
-<body>
-    <header>
-        <span class="logo">Demoquerycy</span>
-        <div class="hamburguer">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <nav class="nav-bar">
-            <ul>
-                <li>
-                    <section class="search-box">
-                        <input type="text" placeholder="O que deseja procurar?" autocomplete="off" id="input-box"></input>
-                        <section class="result-box">
-                            <!-- <ul>
-                                <li>javascript</li> 
-                                <li>web development</li>
-                            </ul> -->
-                        </section>
-                    </section>
-                </li>
-                <li>
-                    <a class="nav-buttons" href="/">Home</a>
-                </li>
-                <li>
-                    <a class="nav-buttons" href="/pagina-politicos">Políticos</a>
-                </li>
-                <li>
-                    <a class="nav-buttons" href="/">Sobre</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+{% extends 'base.html' %}
 
-    <main>
-        <span class="titulo">
-            <h1>Conheça alguns dos Vereadores de São José dos Campos</h1>
-            <p><span class="clique-aqui">Clique aqui</span> ou no botão Políticos para ver mais</p>
-        </span>
-        <!-- Carrossel -->
-        <div class="slide-container swiper">
-            <div class="slide-content">
-                <div class="card-wrapper swiper-wrapper">
-                    
-                    <!-- CARD TEMPLATE -->
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/amelia_naomi.jpg" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Amélia Naomi</h2>
-                            <p class="descricao">Partido: PT</p>
-                        <a href="/perfil/ver._amélia_naomi"><button class="button">Ver Mais </button></a>    
-                        </div>
-                    </div>
-                    <!-- CARD TEMPLATE -->
+{% block title %}
+Home
+{% endblock %}
 
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/dulce_rita.jpg" alt="imagem-card-político" class="card-img">
+{% block additional_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/background.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="py-4">
+
+    <article class="container card">
+        <section class="container text-center my-4">
+            <h2>O seu voto valeu a pena?</h2>
+            <p class="py-1.5 rounded">
+                O Demoquerycy tem como objetivo te dar acesso às informações mais relevantes sobre a atuação dos
+                vereadores da nossa cidade.
+                Com uma interface simples e intuitiva, você encontra tudo o que precisa saber sobre as ações, projetos e
+                comportamento dos seus representantes.
+            </p>
+        </section>
+    </article>
+
+    <div class="container-fluid my-4">
+        <h5 class="text-center">
+            Clique em <span class="text-decoration-underline">Ver Mais</span> para conhecer o perfil dos vereadores
+            de São José dos Campos
+        </h5>
+    </div>
+
+    <div class="container">
+        <!-- Carousel -->
+        <div id="politiciansCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for group in politicos|batch(4, '') %}
+                <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                    <div class="row g-4 justify-content-center">
+                        {% for politico in group %}
+                        {% if politico %}
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="card custom-card text-center shadow-sm">
+                                <div class="custom-card-header">
+                                    <div class="custom-card-overlay"></div>
+                                    <div class="custom-card-img-wrapper">
+                                        <img src="{{ politico.img }}" alt="Foto Vereador"
+                                            class="rounded-circle custom-card-img">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ politico.nome[5:] }}</h5>
+                                    <p class="card-text text-muted card-party">
+                                        Partido: {{ politico.partido.split('(')[-1].replace(')', '') }}
+                                    </p>
+                                    <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}"
+                                        class="btn btn-dark">Ver Mais</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-content">
-                            <h2 class="name">Dulce Rita</h2>
-                            <p class="descricao">Partido: PSDB</p>
-                            <a href="/perfil/ver._dulce_rita"><button class="button">Ver Mais </button></a>
-                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/fabiao_zagueiro.jpg" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Fabião Zagueiro</h2>
-                            <p class="descricao">Partido: Solidariedade</p>
-                            <a href="/perfil/ver._fabião_zagueiro"><button class="button">Ver Mais </button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/fernando_petiti.jpg" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Fernando Petiti</h2>
-                            <p class="descricao">Partido: MDB</p>
-                            <a href="/perfil/ver._fernando_petiti"><button class="button">Ver Mais </button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/juliana_fraga.jpg" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Juliana Fraga</h2>
-                            <p class="descricao">Partido: PT</p>
-                            <a href="/perfil/ver._juliana_fraga"><button class="button">Ver Mais </button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/junior_farmacia.jpg" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Junior da Farmácia</h2>
-                            <p class="descricao">Partido: União Brasil</p>
-                            <a href="/perfil/ver._júnior_da_farmácia"><button class="button">Ver Mais </button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/juvenil_silverio.jpg" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Juvenil Silvério</h2>
-                            <p class="descricao">Partido: União Brasil</p>
-                            <a href="/perfil/ver._juvenil_silvério"><button class="button">Ver Mais </button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/lino_bispo.jpg" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Lino Bispo</h2>
-                            <p class="descricao">Partido: PL</p>
-                            <a href="/perfil/ver._lino_bispo"><button class="button">Ver Mais </button></a>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="../static/img/marcao_academia.jpg" alt="imagem-card-político" class="card-img">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <h2 class="name">Marcão da Academia</h2>
-                            <p class="descricao">Partido: PTB</p>
-                            <a href="/perfil/ver._marcão_da_academia"><button class="button">Ver Mais </button></a>
-                        </div>
-                    </div>
-                    
                 </div>
+                {% endfor %}
             </div>
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination "></div>
-        </div>
 
-    </main>
-    <script src="../static/javascript/swiper-bundle.min.js"></script>
-    <script src="../static/javascript/script.js"></script>
-    <script src="../static/javascript/header-script.js"></script>
-    <script src="../static/javascript/autocomplete.js"></script>
-</body>
-</html>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev custom-control" type="button" data-bs-target="#politiciansCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next custom-control" type="button" data-bs-target="#politiciansCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

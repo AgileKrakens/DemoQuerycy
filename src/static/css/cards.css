@@ -1,0 +1,48 @@
+/* ------------------------ CARDS ------------------------ */
+.custom-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  max-width: 240px; /* Largura do card */
+  margin: 0 auto;
+}
+
+.custom-card-header {
+  position: relative;
+  height: 175px; /* Altura do card */
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c2c2c; /* Cor de fundo da imagem */
+}
+
+.custom-card-img-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-card-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.card-title,
+.card-party {
+  /* Estilização para evitar vazamento de texto */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}

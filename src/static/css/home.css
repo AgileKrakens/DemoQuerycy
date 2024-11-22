@@ -1,0 +1,25 @@
+/* Carousel */
+.carousel {
+    position: relative;
+  }
+  
+  .custom-control {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control-prev {
+    left: 28px;
+  }
+  
+  .carousel-control-next {
+    right: 28px;
+  }
