@@ -2,35 +2,36 @@
 {% block title %}{{ perfil.nome }}{% endblock %}
 
 {% block additional_styles %}
-<link rel="stylesheet" href="{{url_for('static', filename = 'css/reset-perfil.css')}}">
-<link rel="stylesheet" href="{{url_for('static', filename = 'css/perfil.css')}}">
-<link rel="stylesheet" href="{{url_for('static', filename = 'css/background.css')}}">
-<title> {{ perfil.nome }} </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reset-perfil.css') }}">
+<title>{{ perfil.nome }}</title>
 {% endblock %}
 
 {% block content %}
-<div class="container background-section-top">
-    <div class="sidebar">
-        <img src=" {{ perfil.img }}" alt="Foto do Político" class="foto">
-        <div class="card info">
-            <h2>Informações pessoais</h2>
-            <div class="card-body">
-                <p>Nome: <span>{{ perfil.nome }}</span></p>
-                <p>Nome Social:<span> {{ perfil.nome_social }}</span></p>
-                <p>Partido: <span>{{ perfil.partido }}</span></p>
-                <p>Data de nascimento: <span>{{ perfil.data_nasc }}</span></p>
-                <p>Telefone: <span>{{ perfil.telefone[0] }}</span></p>
-                <p>Área profissional: <span>{{ perfil.ocupação }}</span> </p>
+<section class="container-fluid py-4">
+    <div class="row">
+        <!-- Seção de informações pessoais -->
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <img src="{{ perfil.img }}" alt="Foto do Político" class="card-img-top rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Informações Pessoais</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><strong>Nome:</strong> {{ perfil.nome }}</li>
+                        <li><strong>Nome Social:</strong> {{ perfil.nome_social }}</li>
+                        <li><strong>Partido:</strong> {{ perfil.partido }}</li>
+                        <li><strong>Data de Nascimento:</strong> {{ perfil.data_nasc }}</li>
+                        <li><strong>Telefone:</strong> {{ perfil.telefone[0] }}</li>
+                        <li><strong>Área Profissional:</strong> {{ perfil.ocupação }}</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="card meetings">
-            <div class="card-body">
-                <div class="comissoes">
-                    <h2>Comissões</h2>
-                    <ul>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Comissões</h5>
+                    <ul class="list-group">
                         {% for k in perfil.comissoes %}
-                        <li>
-                            {{ k[0] + ' - ' + k[1] }} <br> {{ k[2]}}
+                        <li class="list-group-item">
+                            <strong>{{ k[0] }}:</strong> {{ k[1] }}<br>{{ k[2] }}
                         </li>
                         {% endfor %}
                     </ul>
@@ -38,160 +39,129 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="content">
-        <div class="container-presença">
-            <div class="card-presença">
-                <div class="card-body-presença">
-                    <h5 class="card-title-presença">Falta/Presença nas sessões</h5>
-                    <div class="row">
-                        <div class="label" id="presença">% de presenças: {{ porcentagem_presença }}
+        <!-- Seção principal -->
+        <div class="col-md-9">
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Faltas/Presenças</h5>
+                            <p><strong>% de Presenças:</strong> {{ porcentagem_presença }}</p>
+                            <p><strong>% de Faltas:</strong> {{ porcentagem_ausencia }}</p>
                         </div>
-                        <!-- <div class="value">▲ da média dos vereadores</div> SPRINT 3-->
-                    </div>
-                    <div class="row">
-                        <div class="label" id="faltas">% de faltas: {{ porcentagem_ausencia }}</div>
-                        <!-- <div class="value">▲ da média dos vereadores</div> SPRINT 3-->
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="leis">
-            <div class="table-container">
-                <h2>Proposições</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Tipo</th>
-                            <th>Data</th>
-                            <th>Situação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>353/98</td>
-                            <td>Lei de Proteção Ambiental</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                        <tr>
-                            <td>102/21</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                        <tr>
-                            <td>353/98</td>
-                            <td>Lei de Proteção Ambiental</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                        <tr>
-                            <td>102/21</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                        <tr>
-                            <td>353/98</td>
-                            <td>Lei de Proteção Ambiental</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                        <tr>
-                            <td>102/21</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                        <tr>
-                            <td>353/98</td>
-                            <td>Lei de Proteção Ambiental</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                        <tr>
-                            <td>102/21</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural
-                            </td>
-                        </tr>
 
-                    </tbody>
-                </table>
+            <!-- Proposições -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Proposições</h5>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Tipo</th>
+                                    <th>Data</th>
+                                    <th>Situação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in proposicoes %}
+                                <tr>
+                                    <td>{{ item.codigo }}</td>
+                                    <td>{{ item.tipo }}</td>
+                                    <td>{{ item.data }}</td>
+                                    <td>{{ item.situacao }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="leis">
-            <div class="table-container">
-                <h2>Projetos de Leis</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Tema</th>
-                            <th>Descrição</th>
-                            <th>Data</th>
-                            <th>Situação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>353/98</td>
-                            <td>Lei de Proteção Ambiental</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                        <tr>
-                            <td>102/21</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                            <td>Lei de Incentivo Cultural</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="info-pessoal">
-            <h2>Histórico de mandatos</h2>
-            <ul class="lista-mandatos">
-                {% for k in perfil.mandatos.split('\n') %}
-                <li> {{ k }} <br></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div>
 
-<div class="container-graficos">
-    <div class="card">
-        <div class="filtro-pesquisa">
-            <label for="barra-tema">Pesquisa por tema</label>
-            <div class="barra-pesquisa">
-                <input type="text" id="barra-tema" placeholder="Tema" />
-                <button class="botao-dropdown">▼</button>
+            <!-- Projetos de Leis -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Projetos de Leis</h5>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Tema</th>
+                                    <th>Descrição</th>
+                                    <th>Data</th>
+                                    <th>Situação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in projetos_de_leis %}
+                                <tr>
+                                    <td>{{ item.codigo }}</td>
+                                    <td>{{ item.tema }}</td>
+                                    <td>{{ item.descricao }}</td>
+                                    <td>{{ item.data }}</td>
+                                    <td>{{ item.situacao }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="temas-selecionados">
-                <div>
-                    <input type="checkbox" id="tema-x" name="tema-x" checked />
-                    <label for="tema-x">Tema X selecionado</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="tema-y" name="tema-y" checked />
-                    <label for="tema-y">Tema Y selecionado</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="tema-z" name="tema-z" checked />
-                    <label for="tema-z">Tema Z selecionado</label>
+
+            <!-- Histórico de Mandatos -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Histórico de Mandatos</h5>
+                    <ul class="list-group">
+                        {% for mandato in perfil.mandatos.split('\n') %}
+                        <li class="list-group-item">{{ mandato }}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="card"></div>
-    <div class="graficos"></div>
-</div>
+
+    <!-- Filtro e Gráficos -->
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Pesquisa por Tema</h5>
+                    <div class="form-group">
+                        <input type="text" class="form-control mb-3" placeholder="Tema">
+                        <div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="tema-x" checked>
+                                <label for="tema-x" class="form-check-label">Tema X selecionado</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="tema-y" checked>
+                                <label for="tema-y" class="form-check-label">Tema Y selecionado</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="tema-z" checked>
+                                <label for="tema-z" class="form-check-label">Tema Z selecionado</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <!-- Placeholder -->
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Gráficos</h5>
+                    <p>Gráficos serão exibidos aqui.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
