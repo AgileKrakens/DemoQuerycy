@@ -7,17 +7,19 @@ Home
 {% block additional_styles %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/cards.css')}}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/background.css')}}">
 {% endblock %}
 
 {% block content %}
-<div class="container bg-dark shadow py-2 my-3 rounded">
-    <h5 class="container text-center fonte-header text-light">
-        Clique em <span class="text-decoration-underline">Ver Mais</span> para conhecer mais do último mandato dos vereadores de São José dos Campos
+<div>
+    <h5 class="container text-center fonte-header mb-5">
+        Clique em <span class="text-decoration-underline">Ver Mais</span> para conhecer mais do último mandato dos
+        vereadores de São José dos Campos
     </h5>
-</div> 
+</div>
 
-<div class="container layered-section rounded shadow-lg">
-      <!-- Carrossel -->
+<div class="container-fluid rounded layered-section">
+    <!-- Carrossel -->
     <div id="politiciansCarousel" class="carousel slide" data-bs-ride="carousel">
 
         <!-- Carousel Content -->
@@ -41,8 +43,10 @@ Home
                             <!-- Conteúdo do Card -->
                             <div class="card-body">
                                 <h5 class="card-title">{{ politico.nome }}</h5>
-                                <p class="card-text text-muted card-party">Partido: {{ politico.partido.split('(')[-1].replace(')', '') }}</p>
-                                <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver Mais</a>
+                                <p class="card-text text-muted card-party">Partido: {{
+                                    politico.partido.split('(')[-1].replace(')', '') }}</p>
+                                <a href="/perfil/{{ politico.nome.replace(' ', '_').lower() }}" class="btn btn-dark">Ver
+                                    Mais</a>
                             </div>
                         </div>
                         <!-- End Card -->
@@ -55,14 +59,16 @@ Home
         </div>
 
         <!-- Carousel Controls -->
-        <button class="carousel-control-prev custom-control" type="button" data-bs-target="#politiciansCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev custom-control" type="button" data-bs-target="#politiciansCarousel"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next custom-control" type="button" data-bs-target="#politiciansCarousel" data-bs-slide="next">
+        <button class="carousel-control-next custom-control" type="button" data-bs-target="#politiciansCarousel"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
-    {% endblock %}
+</div>
+{% endblock %}

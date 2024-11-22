@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 import json
 import os
-from itertools import cycle  # Import for repeating items
+from itertools import cycle
 
 app = Flask(__name__)
 
@@ -27,7 +27,7 @@ def index():
     # Carrega os dados dos políticos para a página
     politicos = carregar_politicos()
     num_cards_per_slide = 4
-    num_slides = -(-len(politicos) // num_cards_per_slide)  # Calculate total slides needed
+    num_slides = -(-len(politicos) // num_cards_per_slide)  # Calcula o número de slides restantes
 
     # Repete políticos para preencher o último slide completamente
     politicos_filled = list(zip(range(num_slides * num_cards_per_slide), cycle(politicos)))

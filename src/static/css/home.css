@@ -16,9 +16,9 @@
 }
 
 .carousel-control-prev {
-    left: -10px; /* Adjust left position */
+    left: 10px; /* Adjust left position */
 }
 
 .carousel-control-next {
-    right: -20; /* Adjust right position */
+    right: 10px; /* Adjust right position */
 }
