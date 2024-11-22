@@ -11,14 +11,20 @@ Home
 {% endblock %}
 
 {% block content %}
-<div>
-    <h5 class="container text-center fonte-header mb-5">
-        Clique em <span class="text-decoration-underline">Ver Mais</span> para conhecer mais do último mandato dos
-        vereadores de São José dos Campos
+
+<section class="container text-center"> 
+    <h1> Quem te representa e como você foi representado no último mandato?</h1>
+    <p class="container py-1 rounded">O Demoquerycy tem como objetivo te dar acesso às informações mais relevantes sobre a atuação dos vereadores da nossa cidade. 
+    Com uma interface simples e intuitiva, você encontra tudo o que precisa saber sobre as ações, projetos e comportamento dos seus representantes.</p>
+</section>
+
+<div class="container-fluid my-3 p-2 shadow-sm">
+    <h5 class="text-center fonte-header">
+        Clique em <span class="text-decoration-underline">Ver Mais</span> para conhecer o perfil dos vereadores de São José dos Campos
     </h5>
 </div>
 
-<div class="container-fluid rounded layered-section">
+<div class="container-fluid shadow-sm">
     <!-- Carrossel -->
     <div id="politiciansCarousel" class="carousel slide" data-bs-ride="carousel">
 
@@ -29,7 +35,7 @@ Home
                 <div class="row justify-content-center g-3">
                     {% for politico in group %}
                     {% if politico != '' %}
-                    <div class="col-12 col-md-3"> <!-- Mude de col-md-4 para col-md-3 para 4 cards -->
+                     <div class="col-12 col-sm-6 col-md-6 col-lg-3"> <!-- Muda tamanho da coluna conforme tamanho da tela -->
                         <!-- Card -->
                         <div class="card custom-card text-center shadow-sm">
                             <!-- Imagem e Overlay -->

@@ -1,24 +1,31 @@
+
+/* --------------------------- CARROSSSEL ------------------------------- */
+/* Posiciona o carrossel relativo ao elemento pai */
 .carousel {
-    position: relative; /* Ensure the carousel is positioned relatively */
+    position: relative;
 }
 
+
+/* Estilização dos botões de controle, posicionamento, tamanho e alinhamento com carrossel */
 .custom-control {
-    width: 10%; /* Increase width */
-    height: 10%; /* Increase height */
-    padding: 10px; /* Increase clickable area */
+    width: 30px; /* Largura */
+    height: 30px; /* Comprimento */
+    padding: 10px; /* Área clicável */
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute; /* Position buttons absolutely */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for the height of the button */
+    position: absolute; /* Posiciona os botões de maneira absoluta na página */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste de posição */
+    background-color: rgba(0, 0, 0, 0.500);
 }
 
 .carousel-control-prev {
-    left: 10px; /* Adjust left position */
+    left: 3px; /* Ajuste da posição horizontal */
 }
 
 .carousel-control-next {
-    right: 10px; /* Adjust right position */
+    right: 3px; /* Ajuste da posição horizontal */
 }
+/* --------------------------- FIM CARROSSSEL ---------------------------- */
