@@ -2,14 +2,14 @@ from flask import Flask, render_template
 import json
 import os
 from itertools import cycle
+from db import get_db_connection
+import graphics
 
 app = Flask(__name__)
 
 # Seta o caminho para os JSON dos políticos
 JSON_DIR = 'data/json_files'
 
-
-# Função para carregar dados de todos os políticos
 def carregar_politicos():
     dados = []
     # Itera sobre cada arquivo JSON no diretório passado
@@ -52,16 +52,22 @@ def json_perfil(nome):
 
             porcentagem_presença = round(total_presença * 100 / (total_presença + total_ausencia), 2)
             porcentagem_ausencia = round(total_ausencia * 100 / (total_presença + total_ausencia), 2)
+            
+        # geraçãos do gráficos
+        autor = dados['nome']
+        grafico = graphics.gerar_grafico(autor)
 
         return render_template(
             'perfil.html',
             perfil=dados,
             porcentagem_presença=porcentagem_presença,
             porcentagem_ausencia=porcentagem_ausencia,
+            grafico=grafico
         )
     except FileNotFoundError:
         return "Perfil não encontrado :/", 404
-
+    except Exception as e:
+        return f"ocorreu um erro: {str(e)}", 500 
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
