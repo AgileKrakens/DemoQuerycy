@@ -16,6 +16,8 @@ services:
       - db
     networks:
       - web-network
+    volumes:
+      - ./src:/app
 
   db:
     image: mysql:8.0
