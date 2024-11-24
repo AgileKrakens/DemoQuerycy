@@ -65,7 +65,7 @@ def json_perfil(nome):
             cursor.execute(query, (autor,))
             projetos_de_leis = cursor.fetchall() 
             
-            query = "SELECT processo, ano, tipo, data, situacao, arquivo FROM public_records WHERE autor = %s"
+            query = "SELECT processo, ano, tipo, data, situacao, arquivo, assunto FROM public_records WHERE autor = %s"
             cursor.execute(query, (autor,))
             proposicoes = cursor.fetchall() 
         
