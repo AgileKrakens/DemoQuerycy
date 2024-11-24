@@ -46,7 +46,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Faltas/Presenças</h5>
-                            <p><strong>% de Presenças:</strong> {{ porcentagem_presença }}</p>
+                            <p><strong>% de Presenças:</strong> {{ porcentagem_presenca }}</p>
                             <p><strong>% de Faltas:</strong> {{ porcentagem_ausencia }}</p>
                         </div>
                     </div>
@@ -70,10 +70,10 @@
                             <tbody>
                                 {% for item in proposicoes %}
                                 <tr>
-                                    <td>{{ item[0] }}</td>
-                                    <td>{{ item[1] }}</td>
+                                    <td>{{ item[0] ~ '/' ~ item[1] }}</td>
                                     <td>{{ item[2] }}</td>
-                                    <td>{{ item[3] }}</td>
+                                    <td>{{ item[3] | format_date }}</td>
+                                    <td>{{ item[4] }}</td>
                                 </tr>
                                 {% endfor %}
                             </tbody>

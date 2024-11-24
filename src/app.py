@@ -58,12 +58,16 @@ def json_perfil(nome):
             autor = dados['nome']
             grafico = graphics.gerar_grafico(autor)
             
-            # Consulta ao banco de dados - projeto de leis
+            # Consulta ao banco de dados - projeto de leis e proposições
             connection = get_db_connection()
             cursor = connection.cursor()
             query = "SELECT numero, ano, tema, resumo, data, situacao FROM law_records WHERE autor = %s"
             cursor.execute(query, (autor,))
             projetos_de_leis = cursor.fetchall() 
+            
+            query = "SELECT processo, ano, tipo, data, situacao, arquivo FROM public_records WHERE autor = %s"
+            cursor.execute(query, (autor,))
+            proposicoes = cursor.fetchall() 
         
     except FileNotFoundError:
         return "Perfil não encontrado :/", 404
@@ -81,7 +85,8 @@ def json_perfil(nome):
         porcentagem_presenca=porcentagem_presenca,
         porcentagem_ausencia=porcentagem_ausencia,
         grafico=grafico,
-        projetos_de_leis=projetos_de_leis
+        projetos_de_leis=projetos_de_leis,
+        proposicoes=proposicoes
     )
     
 @app.template_filter('format_date')
