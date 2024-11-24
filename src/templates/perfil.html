@@ -1,9 +1,7 @@
 {% extends "base.html" %}
-{% block title %}{{ perfil.nome }}{% endblock %}
 
-{% block additional_styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/reset-perfil.css') }}">
-<title>{{ perfil.nome }}</title>
+{% block title %}
+{{ perfil.nome }}
 {% endblock %}
 
 {% block content %}
@@ -11,10 +9,12 @@
     <div class="row">
         <!-- Seção de informações pessoais -->
         <div class="col-md-3">
+            <!-- Foto -->
             <div class="card mb-4">
                 <img src="{{ perfil.img }}" alt="Foto do Político" class="card-img-top rounded">
                 <div class="card-body">
-                    <h5 class="card-title">Informações Pessoais</h5>
+                    <!-- Informações pessoais em baixo da foto -->
+                    <h4 class="card-title text-center strong">Informações Pessoais</h4>
                     <ul class="list-unstyled mb-0">
                         <li><strong>Nome:</strong> {{ perfil.nome }}</li>
                         <li><strong>Nome Social:</strong> {{ perfil.nome_social }}</li>
@@ -25,9 +25,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="card">
+            <!-- Comissões -->
+            <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Comissões</h5>
+                    <h5 class="card-title text-center">Comissões</h5>
                     <ul class="list-group">
                         {% for k in perfil.comissoes %}
                         <li class="list-group-item">
@@ -37,26 +38,28 @@
                     </ul>
                 </div>
             </div>
+            <!-- Faltas e presenças -->
+            <div class="card">
+                <div class="card-body">
+                    <ul class="list-group">
+                        <h5 class="card-title text-center">Faltas/Presenças</h5>
+                        <li class="list-group-item">
+                            <p><strong>% de Presenças:</strong> {{ porcentagem_presenca }}</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p><strong>% de Faltas:</strong> {{ porcentagem_ausencia }} </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!-- Seção principal -->
         <div class="col-md-9">
-            <div class="row mb-4">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Faltas/Presenças</h5>
-                            <p><strong>% de Presenças:</strong> {{ porcentagem_presenca }}</p>
-                            <p><strong>% de Faltas:</strong> {{ porcentagem_ausencia }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- Proposições -->
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Proposições</h5>
+                    <h3 class="card-title text-center">Proposições</h3>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -85,7 +88,7 @@
             <!-- Projetos de Leis -->
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Projetos de Leis</h5>
+                    <h3 class="card-title text-center">Projetos de Leis</h3>
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
@@ -126,7 +129,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Filtro e Gráficos -->
     <div class="row mt-4">
         <div class="col-md-6">
