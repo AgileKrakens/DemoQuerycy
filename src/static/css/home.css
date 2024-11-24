@@ -23,3 +23,20 @@
   .carousel-control-next {
     right: 28px;
   }
+
+@media (min-width: 1200px) {
+
+  .custom-card {
+      max-width: 260px; /* Expande um pouco o card */
+      margin: 1rem; /* Adiciona espaçamento entre os cards */
+  }
+
+  .custom-card-header {
+      height: 190px; /* Ajuste proporcional ao tamanho do card */
+  }
+
+  .custom-card-img {
+      width: 160px;
+      height: 160px;
+  }
+}
