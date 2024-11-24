@@ -2,6 +2,14 @@
 
 {% block title %}
 {{ perfil.nome }}
+
+{% endblock %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css')}}">
+{% block additional_styles %}
+
+{% endblock %}
+{% block additional_scripts %}
+<script src="{{ url_for('static', filename='javascript/pagination.js') }}"></script> 
 {% endblock %}
 
 {% block content %}
@@ -59,9 +67,9 @@
             <!-- Proposições -->
             <div class="card mb-4">
                 <div class="card-body">
-                    <h3 class="card-title text-center">Proposições</h3>
-                    <div class="table-responsive">
-                        <table class="table table-striped">
+                    <h5 class="card-title">Proposições</h5>
+                    <div class="table-responsive" style="max-height: 600px; min-height: 600px; overflow-y: auto;">
+                        <table class="table table-striped" id="proposicoes-table">
                             <thead>
                                 <tr>
                                     <th>Código</th>
@@ -82,15 +90,14 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
+
 
             <!-- Projetos de Leis -->
             <div class="card mb-4">
                 <div class="card-body">
-                    <h3 class="card-title text-center">Projetos de Leis</h3>
-                    <div class="table-responsive">
-                        <table class="table table-striped">
+                    <h5 class="card-title">Projetos de Leis</h5>
+                    <div class="table-responsive" style="max-height: 600px; min-height: 600px; overflow-y: auto;">
+                        <table class="table table-striped" id="projetos-table">
                             <thead>
                                 <tr>
                                     <th>Código</th>
@@ -113,8 +120,6 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
 
             <!-- Histórico de Mandatos -->
             <div class="card">
