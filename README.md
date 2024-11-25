@@ -49,20 +49,6 @@ https://github.com/user-attachments/assets/09e7e4a4-59d7-4d1d-b844-55f1984ae509
 - Raspagem de dados pessoais de cada político
 - Persistência dos dados em arquivos JSON
 
-# Instalação e Utilização
-
-```sh
-git clone https://github.com/AgileKrakens/DemoQuerycy.git
-```
-```sh
-cd /DemoQuerycy
-```
-```sh
-docker-compose up
-```
-
----
-
 # MVP de Cada Sprint
 
 ## Sprint 1
@@ -133,10 +119,6 @@ docker-compose up
     - Pesquisa e seleção de um tema
     - Número absoluto de leis aprovadas nesse tema
     - Composição relativa (porcentagem) do tema na atuação legislativa
-    - Comparação com a média do número absoluto e relativo em relação ao resto dos vereadores
-
-### Página Sobre
-- Criação da página "Sobre"
 
 ---
 
@@ -148,21 +130,16 @@ docker-compose up
 | --- | --- | --- | --- |
 | RF001.0 | O site precisa ter uma página com o perfil do vereador pesquisado. | 1 | Alta |
 | RF002.0 | O site deve ter uma página Home de onde se redireciona aos perfis dos candidatos | 1 | Alta |
-| RF002.1 | A página home precisa ter uma barra de pesquisa que permite o usuário buscar algum vereador por nome | 1 | Alta |
-| RF002.2 | A página home precisa ter um botão de redirecionamento para a página “Políticos” | 1 | Alta |
-| RF002.3 | A página “Políticos” deve ter listados todos os cards com nome, foto e partido dos políticos e uma barra de pesquisa por nome. | 2 | Alta |
+| RF002.1 | A página home precisa ter uma rápida introdução ao projeto | 1 | Alta |
+| RF002.2 | A página home precisa ter um carrossel com cards clicáveis que redirecionam para o página do perfil do político | 1 | Alta |
+| RF002.3 | A página home precisa ter um botão de redirecionamento para a página “Políticos” | 1 | Alta |
+| RF002.4 | A página “Políticos” deve ter listados todos os cards com nome, foto e partido dos políticos e uma barra de pesquisa por nome. | 2 | Alta |
 | RF001.1 | No perfil do candidato, é preciso uma seção que mostra a presença do vereador nas sessões | 2 | Média |
 | RF001.5 | No perfil do candidato, é preciso uma seção que mostra os seguintes dados do candidato: nome, partido, telefone, idade, formação, área profissional, histórico de mandatos em São José dos Campos e partidos em que atuou.  | 2 | Média |
 | RF001.4 | No perfil do candidato, é preciso uma seção que mostra as comissões que o vereador participa, e os cargos dele em cada uma | 2 | Baixo |
 | RF003.0 | A página do perfil deve mostrar informações em relação ao tema das leis que o vereador mais aprovou  | 3 | Alta |
-| RF003.2 | Uma janela de pesquisa por tema com list box que mostra com output de quantos projetos aprovados o vereador tem naquele tema | 3 | Alta |
-| RF003.1 | Um gráfico de barra com os 7 temas mais aprovados pelo vereador, mais outros “restantes” que podem ser ampliados e visualizados a porcentagem | 3 | Média |
-| RF001.2 | No perfil do candidato, é preciso uma seção de tabela em que se pesquisa e se mostra as proposições (Lei, Requerimento, Moção, Identificação) do vereador, excluindo leis | 3 | Média |
-| RF001.3 | No perfil do candidato, é preciso uma seção de tabela em que se pesquisa e se mostra as leis aprovadas de autoria do vereador | 3 | Média |
-| RF003.3 | Ambos os gráficos devem ser acompanhados por um terceiro que é a média de todos os vereadores  | 3 |  Baixa |
-| RF004 | A página do perfil deve ter uma seção interativa que permite uma avaliação do candidato | 3 | Baixa |
+| RF003.1 | Um gráfico de barra com os 7 temas mais aprovados pelo vereador, mais outros “restantes” | 3 | Média |
 
-## User Stories
 | Requisito | Cartão | Sprint |
 | --- | --- | --- |
 | RF001.0 | Eu, como eleitor, gostaria de visualizar as informações pessoais e estatísticas de um vereador em uma página dedicada para seu perfil. | 1 |
@@ -173,6 +150,9 @@ docker-compose up
 | RF001.5 | Eu, como eleitor, gostaria de ver uma “seção” lateral com dados biográficos e histórico profissional do vereador na página do perfil. | 2 |
 | RF002.3 | Eu, como eleitor, gostaria de visualizar uma página “Políticos” que possui cards com foto, nome e partido de todos os políticos registrados, para que eu seja redirecionado para o perfil do político ao clicar no card. | 2 |
 | RF002.4 | Eu, como eleitor, gostaria de uma barra de pesquisa na página “Políticos” que filtra os cards correspondentes ao nome que eu pesquisei. | 2 |
+| RF001.3 | Eu, como eleitor, gostaria de ter uma tabela mostrando todas as leis aprovadas pelo político em São José dos Campos. | 3 |
+| RF001.2 | Eu, como eleitor, gostaria de ter uma tabela mostrando todas as proposiçãoes apresentadas pelo político em São José dos Campos. | 3 |
+| RF003.0 e RF003.1 | Eu, como usuário, gostaria de uma seção do perfil com um gráfico de barras que mostra os temas em que o político mais aprovou leis. | 3 |
 
 # Time
 
