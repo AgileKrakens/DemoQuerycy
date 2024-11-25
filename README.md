@@ -15,6 +15,17 @@ DemoQuerycy se propõe a ser uma alternativa digital para a participação efeti
 Utilizando scripts que coletam dados públicos referentes ao trabalho feito na camera dos vereadores, também realizamos análises estatísticas do desempenho individual de cada vereador através desses dados.
 
 Dessa forma, considerando a complexidade dos documentos legais e a dificuldade de navegação no site oficial da câmara, nosso software busca trazer a devida transparência a essas informações e tornar a análise do desempenho do poder legislativo menos técnica, com o objetivo de ser acessível e conclusiva para qualquer público.
+# Features - Sprint 3
+## Demoquerycy v1.0
+https://github.com/user-attachments/assets/5cf3eeb1-a711-4265-8404-cce7c57d41c7
+
+## Persistência de dados
+- Devops e configuração do ambiente do projeto em um servidor local com objetivo de reunir e encapsular as dependencias do projeto
+- Lowcode com objetivo de facilitar um futuro deploy da aplicação
+## Analise de dados
+- geração de gráficos por autor que relatam a quantidade de projetos de leis aprovados, considerando os temas como parâmetro de análise
+## UX
+- Remodelação da estilização das páginas e criação de identidade visual
 
 # Features - Sprint 2
 ## Páginas: Perfil e Políticos
