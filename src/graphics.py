@@ -54,7 +54,7 @@ def gerar_grafico(nome_autor=None):
     plt.bar(indices, temas_totais, color='black', alpha=0.7)
     plt.title('Temas de Leis Aprovadas')
     plt.xlabel('Índice')
-    plt.ylabel('Número de Leis Aprovadas')
+    plt.ylabel('Estatística de Leis Aprovadas')
 
     # Adicionar porcentagens e totais no gráfico
     for i, v in enumerate(temas_totais):
@@ -68,7 +68,7 @@ def gerar_grafico(nome_autor=None):
 
     # Adicionar a legenda ao lado do gráfico
     plt.legend(
-        [legenda], loc='center left', bbox_to_anchor=(1.05, 0.5), fontsize=10, frameon=False, handlelength=0, handletextpad=0
+        [legenda], loc='center left', bbox_to_anchor=(1.05, 0.5), fontsize=10.5, frameon=False, handlelength=0, handletextpad=0
     )
 
     # Ajustar o layout para evitar cortes

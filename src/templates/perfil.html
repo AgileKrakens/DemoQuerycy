@@ -9,7 +9,7 @@
 
 {% endblock %}
 {% block additional_scripts %}
-<script src="{{ url_for('static', filename='javascript/pagination.js') }}"></script> 
+<script src="{{ url_for('static', filename='javascript/pagination.js') }}"></script>
 {% endblock %}
 
 {% block content %}
@@ -19,18 +19,24 @@
         <div class="col-md-3">
             <!-- Foto -->
             <div class="card mb-4">
-                <img src="{{ perfil.img }}" alt="Foto do Político" class="card-img-top rounded">
-                <div class="card-body">
-                    <!-- Informações pessoais em baixo da foto -->
-                    <h4 class="card-title text-center strong">Informações Pessoais</h4>
-                    <ul class="list-unstyled mb-0">
-                        <li><strong>Nome:</strong> {{ perfil.nome }}</li>
-                        <li><strong>Nome Social:</strong> {{ perfil.nome_social }}</li>
-                        <li><strong>Partido:</strong> {{ perfil.partido }}</li>
-                        <li><strong>Data de Nascimento:</strong> {{ perfil.data_nasc }}</li>
-                        <li><strong>Telefone:</strong> {{ perfil.telefone[0] }}</li>
-                        <li><strong>Área Profissional:</strong> {{ perfil.ocupação }}</li>
-                    </ul>
+                <div class="pt-4 px-4 rounded-top">
+                    <img src="{{ perfil.img }}" alt="Foto do Político"
+                        class="card-img-top rounded d-block mx-auto h-80 w-auto">
+                </div>
+                <div class="py-2 mt-4 mb-2 mx-2">
+                    <h4 class="card-title text-center strong font-weight-bold">Informações Pessoais</h4>
+                    <div class="card-body">
+                        <!-- Informações pessoais em baixo da foto -->
+                        <div></div>
+                        <ul class="list-group mb-0">
+                            <li class="list-group-item"><strong>Nome:</strong> {{ perfil.nome }}</li>
+                            <li class="list-group-item"><strong>Nome Social:</strong> {{ perfil.nome_social }}</li>
+                            <li class="list-group-item"><strong>Partido:</strong> {{ perfil.partido }}</li>
+                            <li class="list-group-item"><strong>Data de Nascimento:</strong> {{ perfil.data_nasc }}</li>
+                            <li class="list-group-item"><strong>Telefone:</strong> {{ perfil.telefone[0] }}</li>
+                            <li class="list-group-item"><strong>Área Profissional:</strong> {{ perfil.ocupação }}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <!-- Comissões -->
@@ -47,7 +53,7 @@
                 </div>
             </div>
             <!-- Faltas e presenças -->
-            <div class="card">
+            <div class="card mb-4">
                 <div class="card-body">
                     <ul class="list-group">
                         <h5 class="card-title text-center">Faltas/Presenças</h5>
@@ -63,46 +69,45 @@
         </div>
 
         <!-- Seção principal -->
-        <div class="col-md-9">
+        <div class="col-md-9 mb-4">
             <!-- Proposições -->
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Proposições</h5>
-                    <div class="table-responsive" style="max-height: 600px; min-height: 600px; overflow-y: auto;">
-                        <table class="table table-striped" id="proposicoes-table">
-                            <thead>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Descrição</th>
-                                    <th>Tipo</th>
-                                    <th>Data</th>
-                                    <th>Situação</th>
-                                    <th>Links</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for item in proposicoes %}
-                                <tr>
-                                    <td>{{ item[0] ~ '/' ~ item[1] }}</td>
-                                    <td>{{ item[6] }}</td>
-                                    <td>{{ item[2] }}</td>
-                                    <td>{{ item[3] | format_date }}</td>
-                                    <td>{{ item[4] }}</td>
-                                    <td><a href="{{ item[5] }}">link</a></td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
+                    <h4 class="card-title text-center">Proposições</h4>
+                    <div class="table-responsive mb-4" style="max-height: 382px; min-height: 382px; overflow-y: auto;">
+                      <table class="table table-striped" id="projetos-table">
+                          <thead class="sticky-top table-dark">
+                              <tr>
+                                  <th>Código</th>
+                                  <th>Tema</th>
+                                  <th>Descrição</th>
+                                  <th>Data</th>
+                                  <th>Situação</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              {% for item in projetos_de_leis %}
+                              <tr>
+                                  <td>{{ item[0] ~ '/' ~ item[1] }}</td>
+                                  <td>{{ item[2] }}</td>
+                                  <td>{{ item[3] }}</td>
+                                  <td>{{ item[4] | format_date }}</td>
+                                  <td>{{ item[5] }}</td>
+                              </tr>
+                              {% endfor %}
+                          </tbody>
+                      </table>
+                  </div>
 
-
+                </div>
+            </div>
             <!-- Projetos de Leis -->
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="card-title">Projetos de Leis</h5>
-                    <div class="table-responsive" style="max-height: 600px; min-height: 600px; overflow-y: auto;">
+                    <h4 class="card-title text-center">Projetos de Leis</h4>
+                    <div class="table-responsive mb-4" style="max-height: 382px; min-height: 382px; overflow-y: auto;">
                         <table class="table table-striped" id="projetos-table">
-                            <thead>
+                            <thead class="sticky-top table-dark">
                                 <tr>
                                     <th>Código</th>
                                     <th>Tema</th>
@@ -125,54 +130,27 @@
                         </table>
                     </div>
 
-            <!-- Histórico de Mandatos -->
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Histórico de Mandatos</h5>
-                    <ul class="list-group">
-                        {% for mandato in perfil.mandatos.split('\n') %}
-                        <li class="list-group-item">{{ mandato }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Filtro e Gráficos -->
-    <div class="row mt-4">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Pesquisa por Tema</h5>
-                    <div class="form-group">
-                        <input type="text" class="form-control mb-3" placeholder="Tema">
-                        <div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="tema-x" checked>
-                                <label for="tema-x" class="form-check-label">Tema X selecionado</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="tema-y" checked>
-                                <label for="tema-y" class="form-check-label">Tema Y selecionado</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="tema-z" checked>
-                                <label for="tema-z" class="form-check-label">Tema Z selecionado</label>
-                            </div>
+                    <!-- Histórico de Mandatos -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Histórico de Mandatos</h5>
+                            <ul class="list-group">
+                                {% for mandato in perfil.mandatos.split('\n') %}
+                                <li class="list-group-item">{{ mandato }}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <!-- Placeholder -->
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Gráficos</h5>
-                    <img src="data:image/png;base64,{{ grafico }}" alt="Gráfico de Temas">
-                </div>
-            </div>
+</section>
+
+<!-- Gráfico -->
+<section class="container">
+    <div class="card align-items-center">
+        <div class="card-body">
+            <h4 class="card-title text-center">Participação de cada tema de lei</h4>
+            <img class="responsive w-80 h-80" src="data:image/png;base64,{{ grafico }}" alt="Gráfico de Temas">
         </div>
     </div>
 </section>
