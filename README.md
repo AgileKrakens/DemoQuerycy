@@ -7,7 +7,7 @@ Nesse contexto, é inevitável refletir sobre os modelos democráticos que molda
 
 Entretanto, conforme as organizações políticas se expandiram para níveis nacionais, a prática da democracia direta tornou-se inviável. Reunir milhares de pessoas em uma praça para deliberar é impossível, e por isso elegemos representantes que, em teoria, defendem nossos interesses.
 
-Portanto, diante da falta de engajamento político e dos desafios estruturais da democracia atual, é notório de que apenas um povo informado é capaz de realizar o exercício da democracia, e desse modo, terceirizar a defesa de seus direitos e reivindicações através de um representante. Pensando nisso, desenvolvemos este software com o objetivo de, por meio do ambiente digital, reunir informações relevantes para que o eleitorado conheça melhor seus candidatos e suas ações no poder público. Dessa forma, podemos identificar quais políticos realmente defendem os interesses da população. 
+Pensando nisso, desenvolvemos este software com o objetivo de, por meio do ambiente digital, reunir informações relevantes para que o eleitorado conheça melhor seus candidatos e suas ações no poder público. Dessa forma, podemos identificar quais políticos realmente defendem os interesses da população. 
 
 # Objetivo:
 DemoQuerycy se propõe a ser uma alternativa digital para a participação efetiva e democrática dos cidadãos na conjuntura política. Nesse sentido, coletamos dados públicos referentes ao poder legislativo municipal. 
