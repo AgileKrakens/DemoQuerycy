@@ -21,11 +21,10 @@ https://github.com/user-attachments/assets/5cf3eeb1-a711-4265-8404-cce7c57d41c7
 
 ## Persistência de dados
 - Devops e configuração do ambiente do projeto em um servidor local com objetivo de reunir e encapsular as dependencias do projeto
-- Lowcode com objetivo de facilitar um futuro deploy da aplicação
 ## Analise de dados
 - geração de gráficos por autor que relatam a quantidade de projetos de leis aprovados, considerando os temas como parâmetro de análise
 ## UX
-- Remodelação da estilização das páginas e criação de identidade visual
+- Remodelação da estilização das páginas
 
 # Features - Sprint 2
 ## Páginas: Perfil e Políticos
