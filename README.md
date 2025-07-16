@@ -1,65 +1,66 @@
 <img src="assets/demoquerycy_logo.png">
 
-# Descrição:
-O projeto nasceu em resposta à problemática da falta de engajamento político fora do período eleitoral e à falsa sensação de transparência no cenário democrático, onde muitos cidadãos confiam cegamente nas promessas feitas pelos candidatos durante essas campanhas. Nessa prerrogativa, buscamos evidenciar a atuação de cada político na câmara municipal de São José dos Campos.
+*Uma plataforma de civic tech para análise de dados parlamentares, construída com Flask e Python.*
 
-Nesse contexto, é inevitável refletir sobre os modelos democráticos que moldaram nossa organização social. Na democracia ateniense, por exemplo, os cidadãos, ainda que representando apenas uma pequena parcela do corpo social, exerciam o poder de decisão política de forma direta. Assim, eles defendiam seus interesses de maneira ativa no cenário político.
+![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-2.x-black?logo=flask)
+![MySQL](https://img.shields.io/badge/MySQL-8.0-blue?logo=mysql&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+---
 
-Entretanto, conforme as organizações políticas se expandiram para níveis nacionais, a prática da democracia direta tornou-se inviável. Reunir milhares de pessoas em uma praça para deliberar é impossível, e por isso elegemos representantes que, em teoria, defendem nossos interesses.
+## 1. Visão Geral do Projeto
 
-Pensando nisso, desenvolvemos este software com o objetivo de, por meio do ambiente digital, reunir informações relevantes para que o eleitorado conheça melhor seus candidatos e suas ações no poder público. Dessa forma, podemos identificar quais políticos realmente defendem os interesses da população. 
+O **DemoQuerycy** é uma aplicação web desenvolvida para combater a baixa fiscalização cidadã e a complexidade dos portais de transparência governamentais. A plataforma coleta, processa e apresenta dados sobre a atuação dos vereadores de São José dos Campos (mandato 2020-2024) de forma objetiva, visual e acessível, permitindo que qualquer cidadão possa compreender e analisar o desempenho de seus representantes.
 
-# Objetivo:
-DemoQuerycy se propõe a ser uma alternativa digital para a participação efetiva e democrática dos cidadãos na conjuntura política. Nesse sentido, coletamos dados públicos referentes ao poder legislativo municipal. 
+**Problema:** Portais oficiais de dados políticos são, em geral, pouco intuitivos e de difícil navegação, criando uma barreira entre o cidadão e a informação.
+**Solução:** Uma interface limpa e focada no usuário que resume e evidencia os dados mais relevantes da atividade parlamentar, como proposições, votações e frequência.
 
-Utilizando scripts que coletam dados públicos referentes ao trabalho feito na camera dos vereadores, também realizamos análises estatísticas do desempenho individual de cada vereador através desses dados.
+---
 
-Dessa forma, considerando a complexidade dos documentos legais e a dificuldade de navegação no site oficial da câmara, nosso software busca trazer a devida transparência a essas informações e tornar a análise do desempenho do poder legislativo menos técnica, com o objetivo de ser acessível e conclusiva para qualquer público.
-# Features - Sprint 3
+## 2. Arquitetura e Boas Práticas
+
+Este projeto foi desenvolvido com foco em manutenibilidade, escalabilidade e segurança. As seguintes práticas e padrões de arquitetura foram implementados:
+
+* **Estrutura Modular com Blueprints:** A aplicação utiliza **Blueprints** do Flask para organizar as funcionalidades em componentes desacoplados (ex: um blueprint para autenticação, outro para visualização de dados), facilitando a manutenção e a expansão do projeto.
+* **Gerenciamento de Configuração e Segredos:** As credenciais do banco de dados e outras chaves sensíveis são gerenciadas através de **variáveis de ambiente** (utilizando arquivos `.env` e a biblioteca `python-dotenv`), evitando a exposição de dados sigilosos no código-fonte, conforme a metodologia *Twelve-Factor App*.
+* **Processos de ETL para Coleta de Dados:** A coleta de dados foi estruturada como um processo de **ETL (Extract, Transform, Load)**. Scripts em Python realizam a extração (web scraping de portais HTML e consumo de APIs JSON governamentais), a transformação (limpeza e estruturação dos dados) e a carga (armazenamento no banco de dados).
+* **Acesso Seguro ao Banco de Dados:** A comunicação com o banco de dados MySQL é feita utilizando um conector direto. Para prevenir vulnerabilidades, todas as consultas que envolvem dados de entrada são construídas utilizando **queries parametrizadas**, uma prática essencial de segurança para evitar ataques de SQL Injection.
+* **Ambientes de Desenvolvimento Padronizados com Docker:** O projeto inclui uma configuração com **Docker e Docker Compose**, permitindo que qualquer desenvolvedor suba um ambiente de desenvolvimento idêntico e isolado com um único comando, garantindo consistência e eliminando problemas de configuração local.
+
+---
+
+## 3. Tecnologias Utilizadas
+
+| Categoria          | Tecnologia                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------------- |
+| **Backend** | `Python 3.9+`, `Flask`                                                                                         |
+| **Banco de Dados** | `MySQL`                                                                                                 |
+| **Data Science** | `Pandas`, `Matplotlib`/`Seaborn` (para as análises estatísticas e geração de gráficos)                    |
+| **Data Collection**| `Beautiful Soup 4`, `Requests`, `Selenium`                                                              |
+| **DevOps** | `Docker`, `Docker Compose`                                                                                      |
+| **Frontend** | `HTML5`, `CSS3`, `JavaScript`, `Bootstrap`                                                                    |
+
+---
+
+# MVP Demo - Sprint 3
 ## Demoquerycy v1.0
 https://github.com/user-attachments/assets/5cf3eeb1-a711-4265-8404-cce7c57d41c7
 
-## Persistência de dados
-- Devops e configuração do ambiente do projeto em um servidor local com objetivo de reunir e encapsular as dependencias do projeto
-## Analise de dados
-- geração de gráficos por autor que relatam a quantidade de projetos de leis aprovados, considerando os temas como parâmetro de análise
-## UX
-- Remodelação da estilização das páginas
-
-# Features - Sprint 2
+# MVP Demo - Sprint 2
 ## Páginas: Perfil e Políticos
 https://github.com/user-attachments/assets/b890285e-84ad-406f-a35d-badcc0d17ad9
 
-- Página Políticos:
-  * Geração automatizada dos Cards
-  * Barra de pesquisa: filtragem dos cards por nome do político correspondente
-- Página Perfil
-  * Inserção de novas informações biográficas e dados relevantes sobre a atuação do político na câmara
-  * Estilização da página
 ## Data Scraping
 https://github.com/user-attachments/assets/feadcc8b-f0f8-4840-99d5-b324d3745e62
 
-- crawler_personal_data:
-  * Implementação de novos módulos: Área profissional, Comissões, Histórico de mandatos e Presença/Falta de cada político nas sessões
-  * Salvamento dos JSON com base no Endpoint da aplicação: exibição dos dados automatizada e sincronização com outros componentes
-
-# Features - Sprint 1
+# MVP Demo - Sprint 1
 ## Aplicação Web
 https://github.com/user-attachments/assets/29591d73-230e-4df1-af40-73fbc30b7fe2
 
-- Página Home:
-  * Barra de pesquisa
-  * Carrosel
-- Escalabilidade da Página Perfil:
-  * Dados biográficos 
-  * Estrutura geral
 ## crawler_personal_data
 https://github.com/user-attachments/assets/09e7e4a4-59d7-4d1d-b844-55f1984ae509
 
-- Raspagem de dados pessoais de cada político
-- Persistência dos dados em arquivos JSON
-
-# MVP de Cada Sprint
+# Descrição do MVP de cada Sprint
 
 ## Sprint 1
 
